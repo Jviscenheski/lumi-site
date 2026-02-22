@@ -267,13 +267,37 @@ body {
 }
 
 .card-pergunta {
-  background: white;
   padding: 18px 20px;
   border-radius: 18px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
   font-size: 15px;
   transition: 0.3s ease;
   cursor: default;
+  color: #1f1f1f;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.card-pergunta:nth-child(1) {
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+}
+
+.card-pergunta:nth-child(2) {
+  background: linear-gradient(to right, #f8fbff, #eaf3ff);
+}
+
+.card-pergunta:nth-child(3) {
+  background: linear-gradient(to bottom, #fff9f5, #ffece3);
+}
+
+.card-pergunta:nth-child(4) {
+  background: linear-gradient(45deg, #f3fff8, #e3fcef);
+}
+
+.card-pergunta:nth-child(5) {
+  background: linear-gradient(to left, #f7f0ff, #efe5ff);
+}
+
+.card-pergunta:nth-child(6) {
+  background: linear-gradient(to top right, #fffaf0, #ffe8cc);
 }
 
 .card-pergunta:hover {
@@ -338,7 +362,7 @@ footer {
       <p>
         A Lumi é um chatbot especializado em segurança para celíacos.
         Ela utiliza múltiplas verificações e interpreta imagens,
-        marcas e estabelecimentos para oferecer respostas seguras.
+        marcas e nomes de cidade para oferecer respostas seguras.
         <br><br>
         Algumas perguntas são mais claras e objetivas — e isso
         ajuda a Lumi a te orientar com ainda mais precisão.
@@ -349,7 +373,7 @@ footer {
       <div class="card-pergunta">A marca XXX é segura?</div>
       <div class="card-pergunta">Dicas de confeitaria em Florianópolis?</div>
       <div class="card-pergunta">Tem restaurantes seguros em Curitiba?</div>
-      <div class="card-pergunta">Onde posso comer hambúrguer em São Paulo</div>
+      <div class="card-pergunta">Onde posso comer hambúrguer em São Paulo?</div>
       <div class="card-pergunta">Ou apenas enviar a foto da composição! 📸</div>
     </div>
 
