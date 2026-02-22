@@ -1,326 +1,231 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lumi — Sua Assistente Sem Glúten</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumi - Assistente para Celíacos</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Inter", sans-serif;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    body {
-      background: linear-gradient(
-        180deg,
-        #f6fbff,
-        #fff7fc
-      );
-      color: #1a1a1a;
-      overflow-x: hidden;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fffafc;
+  color: #444;
+}
 
-    section {
-      padding: 90px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
 
-    h1, h2 {
-      font-weight: 800;
-      letter-spacing: -1px;
-    }
+header {
+  background: linear-gradient(135deg, #ffe6f0, #fff5f9);
+  padding: 80px 0;
+  text-align: center;
+}
 
-    h2 {
-      font-size: 2.3rem;
-      margin-bottom: 25px;
-      text-align: center;
-    }
+header h1 {
+  font-size: 42px;
+  color: #e75480;
+}
 
-    p {
-      line-height: 1.6;
-      font-size: 1.1rem;
-      opacity: 0.85;
-    }
+header p {
+  font-size: 18px;
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-    /* HERO */
-    header {
-      text-align: center;
-      padding: 110px 20px 80px;
-    }
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 30px;
+  background: #e75480;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
 
-    header h1 {
-      font-size: 4.2rem;
-      color: #2b7cff;
-    }
+.btn:hover {
+  background: #d63c6b;
+}
 
-    header p {
-      max-width: 680px;
-      margin: 20px auto;
-      font-size: 1.25rem;
-    }
+.section {
+  padding: 70px 0;
+}
 
-    .cta {
-      margin-top: 40px;
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
+.section h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #e75480;
+}
 
-    .btn {
-      padding: 15px 32px;
-      border-radius: 999px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: 0.3s;
-      font-size: 1rem;
-    }
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
 
-    .btn-primary {
-      background: #2b7cff;
-      color: white;
-      box-shadow: 0 15px 35px rgba(43, 124, 255, 0.25);
-    }
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  width: 300px;
+  text-align: center;
+}
 
-    .btn-primary:hover {
-      transform: translateY(-4px);
-      background: #1f63d6;
-    }
+.gallery {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+}
 
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.75);
-      border: 1px solid rgba(43, 124, 255, 0.25);
-      color: #2b7cff;
-    }
+.gallery img {
+  width: 280px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
 
-    .btn-secondary:hover {
-      transform: translateY(-4px);
-      background: white;
-    }
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
 
-    /* PREMIUM CARDS */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
-      margin-top: 50px;
-    }
+.testimonial {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  width: 300px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
 
-    .card {
-      background: rgba(255, 255, 255, 0.75);
-      border-radius: 28px;
-      padding: 32px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-      border: 1px solid rgba(0,0,0,0.04);
-      transition: 0.35s;
-    }
+.pricing {
+  text-align: center;
+}
 
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 18px 40px rgba(0,0,0,0.09);
-    }
+.price-card {
+  background: white;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.07);
+  display: inline-block;
+}
 
-    .card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 12px;
-    }
+.price {
+  font-size: 36px;
+  color: #e75480;
+  margin: 20px 0;
+}
 
-    /* MEDIA AREA */
-    .media-box {
-      margin-top: 50px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 25px;
-    }
-
-    .media {
-      background: rgba(255,255,255,0.75);
-      border-radius: 25px;
-      padding: 25px;
-      text-align: center;
-      border: 1px solid rgba(0,0,0,0.04);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    }
-
-    .media img {
-      width: 100%;
-      border-radius: 20px;
-      margin-top: 15px;
-    }
-
-    iframe {
-      width: 100%;
-      height: 250px;
-      border-radius: 20px;
-      margin-top: 15px;
-      border: none;
-    }
-
-    /* TESTIMONIALS */
-    .testimonials {
-      margin-top: 55px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    }
-
-    .testimonial {
-      background: rgba(255,255,255,0.8);
-      border-radius: 25px;
-      padding: 28px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    }
-
-    .testimonial strong {
-      display: block;
-      margin-top: 15px;
-      font-size: 1rem;
-      color: #2b7cff;
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 40px;
-      font-size: 0.9rem;
-      opacity: 0.65;
-    }
-
-    /* RESPONSIVE */
-    @media(max-width: 850px) {
-      .media-box {
-        grid-template-columns: 1fr;
-      }
-    }
-
-  </style>
+footer {
+  background: #ffe6f0;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 14px;
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <header>
-    <h1>✨ Lumi</h1>
-    <p>
-      Sua assistente sem glúten para uma vida mais leve e segura.  
-      Descubra em segundos se um produto ou cosmético é seguro para celíacos.
-    </p>
+<header>
+  <div class="container">
+    <h1>Lumi 🌸</h1>
+    <p>Seu chatbot no WhatsApp que ajuda celíacos a entender se marcas são seguras, encontrar locais confiáveis e analisar ingredientes com foto.</p>
+    <a href="https://wa.me/SEUNUMEROAQUI" class="btn">Começar agora no WhatsApp</a>
+  </div>
+</header>
 
-    <div class="cta">
-      <a href="#" class="btn btn-primary">Testar no WhatsApp 🚀</a>
-      <a href="#como" class="btn btn-secondary">Ver como funciona</a>
-    </div>
-  </header>
-
-  <!-- FEATURES -->
-  <section id="como">
-    <h2>O que a Lumi faz por você?</h2>
-
-    <div class="grid">
+<section class="section">
+  <div class="container">
+    <h2>Como funciona</h2>
+    <div class="features">
       <div class="card">
-        <h3>📸 Escaneia rótulos</h3>
-        <p>Envie uma foto e receba uma resposta imediata.</p>
+        <h3>🔎 Consulte marcas</h3>
+        <p>Descubra rapidamente se uma marca é segura para celíacos.</p>
       </div>
-
       <div class="card">
-        <h3>🚫 Detecta glúten oculto</h3>
-        <p>Ingredientes perigosos e alertas claros para celíacos.</p>
+        <h3>📍 Encontre locais</h3>
+        <p>Receba recomendações de restaurantes e cafés seguros no Brasil.</p>
       </div>
-
       <div class="card">
-        <h3>💄 Cosméticos seguros</h3>
-        <p>Descubra se maquiagem e skincare são seguros também.</p>
-      </div>
-
-      <div class="card">
-        <h3>❤️ Mais tranquilidade</h3>
-        <p>Menos medo no dia a dia. Mais liberdade para viver.</p>
+        <h3>📸 Envie fotos</h3>
+        <p>Envie a foto dos ingredientes e receba análise instantânea.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- MEDIA -->
-  <section>
-    <h2>Veja a Lumi funcionando ✨</h2>
-    <p style="text-align:center;">
-      Aqui você pode colocar fotos, prints e vídeos mostrando como ela responde no WhatsApp.
-    </p>
-
-    <div class="media-box">
-
-      <!-- FOTO -->
-      <div class="media">
-        <h3>📷 Print da Lumi</h3>
-        <img src="sua-foto-aqui.png" alt="Exemplo Lumi">
-        <p style="margin-top:10px;">
-          (Troque o arquivo pela imagem real depois)
-        </p>
-      </div>
-
-      <!-- VÍDEO -->
-      <div class="media">
-        <h3>🎥 Vídeo rápido</h3>
-        <iframe 
-          src="https://www.youtube.com/embed/VIDEO_ID_AQUI"
-          allowfullscreen>
-        </iframe>
-        <p style="margin-top:10px;">
-          (Troque pelo seu vídeo do YouTube ou Drive)
-        </p>
-      </div>
-
+<section class="section">
+  <div class="container">
+    <h2>Demonstração</h2>
+    <div class="gallery">
+      <img src="demo1.jpg" alt="Demonstração 1">
+      <img src="demo2.jpg" alt="Demonstração 2">
+      <img src="demo3.jpg" alt="Demonstração 3">
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- TESTIMONIALS -->
-  <section>
-    <h2>Depoimentos 💙</h2>
-
+<section class="section">
+  <div class="container">
+    <h2>O que dizem sobre a Lumi</h2>
     <div class="testimonials">
-
       <div class="testimonial">
-        <p>
-          “A Lumi me ajudou muito no mercado. Agora eu compro com muito mais segurança.”
-        </p>
-        <strong>— Juliana, celíaca</strong>
+        <p>"Mudou minha rotina! Agora faço compras com muito mais segurança."</p>
+        <strong>— Mariana, SP</strong>
       </div>
-
       <div class="testimonial">
-        <p>
-          “Eu sempre tinha medo de ingredientes escondidos. A Lumi virou minha companhia diária.”
-        </p>
-        <strong>— Amanda, Curitiba</strong>
+        <p>"A análise por foto é surreal. Me salvou várias vezes."</p>
+        <strong>— Ana, Curitiba</strong>
       </div>
-
       <div class="testimonial">
-        <p>
-          “Simples, rápida e acolhedora. Parece que tenho uma amiga comigo.”
-        </p>
-        <strong>— Rafael, São Paulo</strong>
+        <p>"Finalmente me sinto segura viajando."</p>
+        <strong>— Juliana, RJ</strong>
       </div>
-
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FINAL CTA -->
-  <section>
-    <h2>Pronta para viver com mais leveza?</h2>
-    <p style="text-align:center;">
-      Assine a Lumi e tenha uma assistente sem glúten sempre com você.
-    </p>
-
-    <div class="cta">
-      <a href="#" class="btn btn-primary">Assinar por R$9,90/mês ✨</a>
+<section class="section pricing">
+  <div class="container">
+    <h2>Plano Premium</h2>
+    <div class="price-card">
+      <h3>Acesso completo</h3>
+      <div class="price">R$29,90/mês</div>
+      <p>✔ Consultas ilimitadas<br>
+         ✔ Análise de fotos<br>
+         ✔ Locais seguros<br>
+         ✔ Atualizações constantes</p>
+      <a href="https://wa.me/SEUNUMEROAQUI" class="btn">Assinar agora</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    © 2026 Lumi — Assistente sem glúten ✨
-  </footer>
+<section class="section">
+  <div class="container">
+    <h2>Perguntas Frequentes</h2>
+    <p><strong>A Lumi substitui orientação médica?</strong><br>
+    Não. Ela auxilia na interpretação de rótulos e locais.</p>
+
+    <p><strong>Funciona em todo o Brasil?</strong><br>
+    Sim, a base de dados cobre todo o país.</p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Lumi - Assistente para Celíacos 🌸
+</footer>
 
 </body>
 </html>
