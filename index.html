@@ -166,6 +166,47 @@ body {
   width: 300px;
 }
 
+/* STATS SECTION */
+.stats-section {
+  background: linear-gradient(135deg, #f4fbff, #fff3f9);
+  padding: 80px 0;
+}
+
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.stat-card {
+  background: white;
+  padding: 40px 50px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+  transition: 0.3s ease;
+  min-width: 220px;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+}
+
+.stat-number {
+  font-size: 38px;
+  font-weight: 700;
+  color: #ff9ecb;
+}
+
+.stat-label {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
 /* Pricing */
 .pricing-box {
   background: linear-gradient(135deg, var(--rosa), var(--azul));
@@ -241,6 +282,28 @@ footer {
       <img src="lumi_2.JPG">
       <img src="lumi_3.JPG">
     </div>
+  </div>
+</section>
+
+<!-- NÚMEROS DA LUMI -->
+<section class="stats-section">
+  <div class="stats-container">
+    
+    <div class="stat-card">
+      <div class="stat-number">+100</div>
+      <div class="stat-label">Estabelecimentos seguros</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-number">+230</div>
+      <div class="stat-label">Marcas cadastradas</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-number">+20</div>
+      <div class="stat-label">Cidades no Brasil</div>
+    </div>
+
   </div>
 </section>
 
