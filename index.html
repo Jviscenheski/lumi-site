@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Lumi | Assistente para Celíacos</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --azul: #dff3ff;
-  --azul-escuro: #7cc6f2;
-  --rosa: #ffe6f2;
-  --rosa-escuro: #ff9ecb;
-  --texto: #4a4a4a;
+  --azul: #eaf7ff;
+  --azul-escuro: #78c7f3;
+  --rosa: #fff0f7;
+  --rosa-escuro: #ff9bc8;
+  --texto: #454545;
+  --cinza: #777;
+  --verde: #8dd8b3;
 }
 
 * {
@@ -22,295 +24,420 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
-  background: #ffffff;
   color: var(--texto);
-  line-height: 1.6;
+  background: white;
+  line-height: 1.7;
 }
 
 .container {
   width: 90%;
-  max-width: 1150px;
+  max-width: 1180px;
   margin: auto;
+}
+
+section {
+  padding: 90px 0;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section-subtitle {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  color: var(--cinza);
+  font-size: 18px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 16px 30px;
+  background: var(--rosa-escuro);
+  color: white;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: 0.3s ease;
+  box-shadow: 0 10px 30px rgba(255, 158, 203, 0.35);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  background: var(--azul-escuro);
+}
+
+.btn-secondary {
+  margin-left: 16px;
+  color: var(--texto);
+  text-decoration: none;
+  font-weight: 500;
 }
 
 /* HERO */
 .hero {
-  background: linear-gradient(135deg, var(--azul), var(--rosa));
-  padding: 100px 0;
+  background: linear-gradient(135deg, #eef9ff, #fff4f9);
+  padding: 120px 0 90px;
 }
 
 .hero-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 40px;
+  gap: 60px;
 }
 
 .hero-text {
   flex: 1;
+  min-width: 320px;
 }
 
-.hero-text h1 {
-  font-size: 42px;
-  margin-bottom: 20px;
-}
-
-.hero-text span {
-  color: var(--rosa-escuro);
-}
-
-.hero-text p {
-  font-size: 18px;
-  max-width: 500px;
-}
-
-.btn {
+.hero-badge {
   display: inline-block;
-  margin-top: 30px;
-  padding: 14px 28px;
-  background: var(--rosa-escuro);
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: 600;
-  transition: 0.3s;
+  background: white;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
 }
 
-.btn:hover {
-  background: var(--azul-escuro);
+.hero h1 {
+  font-size: 60px;
+  margin-bottom: 24px;
+  color: #2d2d2d;
 }
 
-/* Mockup */
-.phone {
+.hero p {
+  font-size: 20px;
+  color: #5f5f5f;
+  max-width: 620px;
+}
+
+.hero-small {
+  margin-top: 24px;
+  font-size: 16px !important;
+  color: #777 !important;
+}
+
+.hero-image {
   flex: 1;
   text-align: center;
 }
 
-.phone img {
-  width: 280px;
-  border-radius: 40px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+.hero-image img {
+  width: 320px;
+  border-radius: 42px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.12);
 }
 
-/* Sections */
-
-.section {
-  padding: 70px 0; /* espaço entre seções */
-}
-  
-.section p {
-  padding: 10px 0;
+/* DOR */
+.pain {
+  background: white;
 }
 
-.section h2 {
-  text-align: center;
-  margin-bottom: 60px;
-  font-size: 30px;
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 50px;
 }
 
-/* Features */
+.pain-card {
+  background: linear-gradient(135deg, #fff5f9, #eef8ff);
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.04);
+}
+
+.pain-card h3 {
+  margin-bottom: 12px;
+}
+
+/* FEATURES */
 .features {
-  display: flex;
-  flex-wrap: wrap;
+  background: linear-gradient(135deg, #f9fcff, #fff7fb);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  justify-content: center;
 }
 
-.card {
-  background: #fff;
+.feature-card {
+  background: white;
   padding: 35px;
-  border-radius: 25px;
-  width: 300px;
-  text-align: center;
+  border-radius: 28px;
   box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
-.card:hover {
+.feature-card:hover {
   transform: translateY(-8px);
 }
 
-.card h3 {
-  margin-bottom: 15px;
+.feature-card h3 {
+  margin: 20px 0 12px;
 }
 
-/* Gallery */
+.feature-icon {
+  font-size: 38px;
+}
+
+/* CHAT */
+.chat-demo {
+  max-width: 900px;
+  margin: auto;
+}
+
+.chat-box {
+  background: #f7f7f7;
+  border-radius: 30px;
+  padding: 40px;
+  margin-bottom: 30px;
+}
+
+.message-user,
+.message-bot {
+  max-width: 75%;
+  padding: 18px 22px;
+  border-radius: 24px;
+  margin-bottom: 16px;
+  font-size: 15px;
+}
+
+.message-user {
+  background: #dcf8c6;
+  margin-left: auto;
+}
+
+.message-bot {
+  background: white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+/* GALLERY */
 .gallery {
   column-count: 3;
-  column-gap: 30px;
-  max-width: 1200px;
-  margin: auto;
+  column-gap: 25px;
 }
 
 .gallery img {
   width: 100%;
-  height: auto;
-  margin-bottom: 30px;
-  border-radius: 25px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  margin-bottom: 25px;
+  border-radius: 24px;
   break-inside: avoid;
-  display: block;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
-/* Testimonials */
-.testimonials {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
+/* TRUST */
+.trust {
+  background: linear-gradient(135deg, #eef9ff, #fff4fa);
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.trust-card {
+  background: white;
+  padding: 28px;
+  border-radius: 24px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.05);
+}
+
+.warning-box {
+  background: #fff8df;
+  padding: 28px;
+  border-radius: 24px;
+  margin-top: 40px;
+  border: 1px solid #f4e1a1;
+}
+
+/* TESTIMONIALS */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
 }
 
 .testimonial {
-  background: var(--azul);
-  padding: 30px;
-  border-radius: 25px;
-  width: 300px;
+  background: linear-gradient(135deg, #eef8ff, #fff4f9);
+  padding: 35px;
+  border-radius: 28px;
 }
 
-/* STATS SECTION */
-.stats-section {
-  background: linear-gradient(135deg, #f4fbff, #fff3f9);
-  padding: 80px 0;
-}
-
-.stats-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.stat-card {
+/* ROADMAP */
+.roadmap {
   background: white;
-  padding: 40px 50px;
-  border-radius: 25px;
-  text-align: center;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
-  transition: 0.3s ease;
-  min-width: 220px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  height: 170px; /* ALTURA FIXA */
 }
 
-.stat-card:hover {
-  transform: translateY(-8px);
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
 }
 
-.stat-number {
-  font-size: 38px;
-  font-weight: 700;
-  color: #ff9ecb;
+.roadmap-card {
+  padding: 30px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #fff5fa, #eef7ff);
 }
 
-.stat-label {
-  margin-top: 10px;
-  font-size: 16px;
-  color: #555;
-  word-wrap: break-word;
-}
-
-/* Pricing */
+/* PRICING */
 .pricing-box {
-  background: linear-gradient(135deg, var(--rosa), var(--azul));
-  padding: 50px;
-  border-radius: 30px;
-  text-align: center;
-  max-width: 500px;
+  max-width: 560px;
   margin: auto;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.07);
+  background: linear-gradient(135deg, #fff0f7, #edf8ff);
+  padding: 55px;
+  border-radius: 32px;
+  text-align: center;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.08);
 }
 
 .price {
-  font-size: 38px;
-  margin: 20px 0;
+  font-size: 54px;
   font-weight: 700;
+  margin: 20px 0;
 }
 
-.perguntas {
-  padding: 100px 20px;
-  background: #fafafa;
+.pricing-box ul {
+  list-style: none;
+  margin: 30px 0;
 }
 
-.perguntas-container {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.pricing-box li {
+  margin-bottom: 14px;
+}
+
+/* ABOUT */
+.about {
+  background: linear-gradient(135deg, #f8fcff, #fff5fa);
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
   gap: 60px;
   align-items: center;
 }
 
-.perguntas-texto h2 {
-  font-size: 32px;
+.about-image img {
+  width: 320px;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.about-text {
+  flex: 1;
+  min-width: 320px;
+}
+
+.about-text h2 {
+  text-align: left;
+}
+
+.about-text p {
   margin-bottom: 20px;
 }
 
-.perguntas-texto p {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #555;
+/* FAQ */
+.faq {
+  background: white;
 }
 
-.perguntas-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+.faq-container {
+  max-width: 850px;
+  margin: auto;
 }
 
-.card-pergunta {
-  padding: 18px 20px;
-  border-radius: 18px;
-  font-size: 15px;
-  transition: 0.3s ease;
-  cursor: default;
-  color: #1f1f1f;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+.faq-item {
+  background: #fafafa;
+  border-radius: 20px;
+  padding: 28px;
+  margin-bottom: 20px;
 }
 
-.card-pergunta:nth-child(1) {
-  background: linear-gradient(135deg, #ffe6f0, #e6f0ff);
+.faq-item h3 {
+  margin-bottom: 10px;
 }
 
-.card-pergunta:nth-child(2) {
-  background: linear-gradient(to right, #ffd9ec, #e0ecff);
+/* CTA FINAL */
+.final-cta {
+  background: linear-gradient(135deg, #78c7f3, #ff9bc8);
+  color: white;
+  text-align: center;
 }
 
-.card-pergunta:nth-child(3) {
-  background: linear-gradient(to bottom, #ffeaf5, #e8f3ff);
+.final-cta h2 {
+  color: white;
+  font-size: 46px;
 }
 
-.card-pergunta:nth-child(4) {
-  background: linear-gradient(45deg, #ffd6eb, #dce9ff);
+.final-cta p {
+  font-size: 20px;
+  max-width: 700px;
+  margin: 20px auto 40px;
 }
 
-.card-pergunta:nth-child(5) {
-  background: linear-gradient(to left, #ffe3f2, #e6f2ff);
+.final-cta .btn {
+  background: white;
+  color: #ff88bb;
 }
 
-.card-pergunta:nth-child(6) {
-  background: linear-gradient(to top right, #ffdff1, #dbe8ff);
-}
-
-.card-pergunta:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
-}
-
-/* Footer */
 footer {
-  background: var(--azul);
-  padding: 30px 0;
+  padding: 30px;
   text-align: center;
   font-size: 14px;
+  background: #f7f7f7;
+}
+
+@media(max-width: 768px) {
+
+.hero h1 {
+  font-size: 42px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.gallery {
+  column-count: 1;
+}
+
+.hero {
+  padding-top: 80px;
+}
+
+.final-cta h2 {
+  font-size: 34px;
+}
+
+.btn-secondary {
+  display: block;
+  margin-top: 20px;
+  margin-left: 0;
+}
+
 }
 </style>
 </head>
@@ -320,65 +447,207 @@ footer {
 <!-- HERO -->
 <section class="hero">
   <div class="container hero-content">
+
     <div class="hero-text">
-      <h1>Mais segurança para quem vive <span>sem glúten</span> ✨</h1>
-        Envie a foto da lista de ingredientes de cosméticos e receba uma análise clara e rápida.
-        Encontre também lugares confiáveis ao redor do mundo — direto no seu WhatsApp.
-        </p>
+
+      <div class="hero-badge">
+        ✨ Criada por quem vive a rotina celíaca todos os dias
+      </div>
+
+      <h1>
+        Comer não deveria dar medo.
+      </h1>
+
+      <p>
+        A Lumi ajuda celíacos a encontrarem produtos, restaurantes e informações mais seguras — direto no WhatsApp.
       </p>
-      <a href="https://wa.me/SEUNUMEROAQUI" class="btn">Começar agora</a>
+
+      <p class="hero-small">
+        Porque viver sem glúten já exige preocupação demais.
+      </p>
+
+      <div style="margin-top:40px;">
+        <a href="https://wa.me/SEUNUMEROAQUI" class="btn">
+          Conversar com a Lumi
+        </a>
+
+        <a href="#como-funciona" class="btn-secondary">
+          Ver como funciona
+        </a>
+      </div>
+
     </div>
-    <div class="phone">
-      <img src="lumi_profile.png" alt="Lumi Profile">
+
+    <div class="hero-image">
+      <img src="lumi_profile.png" alt="Lumi">
     </div>
+
+  </div>
+</section>
+
+<!-- DOR -->
+<section class="pain">
+  <div class="container">
+
+    <h2>
+      Se você é celíaco, provavelmente já passou por isso
+    </h2>
+
+    <p class="section-subtitle">
+      A Lumi nasceu justamente da exaustão de precisar pesquisar tudo antes de consumir.
+    </p>
+
+    <div class="pain-grid">
+
+      <div class="pain-card">
+        <h3>📦 Ler o mesmo rótulo várias vezes</h3>
+        <p>
+          E ainda sair da loja sem ter certeza se aquilo era realmente seguro.
+        </p>
+      </div>
+
+      <div class="pain-card">
+        <h3>🍽️ Não confiar em restaurantes</h3>
+        <p>
+          Porque “tem opção sem glúten” nem sempre significa segurança.
+        </p>
+      </div>
+
+      <div class="pain-card">
+        <h3>📩 Mandar mensagem para marcas</h3>
+        <p>
+          E nunca receber respostas claras sobre contaminação cruzada.
+        </p>
+      </div>
+
+      <div class="pain-card">
+        <h3>🎒 Levar comida na bolsa “por garantia”</h3>
+        <p>
+          Porque sair sem planejamento parece arriscado demais.
+        </p>
+      </div>
+
+    </div>
+
   </div>
 </section>
 
 <!-- FEATURES -->
-<section class="section">
+<section class="features" id="como-funciona">
   <div class="container">
-    <h2>Como a Lumi funciona</h2>
-    <div class="features">
-      <div class="card">
-        <h3>📍 Locais confiáveis</h3>
-        <p>Receba indicações de restaurantes confiáveis no Brasil e, em breve, no mundo!</p>
+
+    <h2>
+      A Lumi te ajuda nas dúvidas do dia a dia
+    </h2>
+
+    <p class="section-subtitle">
+      Tudo acontece de forma simples, rápida e acolhedora no WhatsApp.
+    </p>
+
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <div class="feature-icon">🍽️</div>
+        <h3>Comer fora com mais confiança</h3>
+        <p>
+          Descubra restaurantes, cafeterias e lugares indicados pela comunidade celíaca.
+        </p>
       </div>
-      <div class="card">
-        <h3>📸 Leitura de ingredientes por foto</h3>
-        <p>Envie uma foto da lista de ingredientes de produtos cosméticos e descubra se contém glúten ou não.</p>
+
+      <div class="feature-card">
+        <div class="feature-icon">📸</div>
+        <h3>Tire foto do rótulo</h3>
+        <p>
+          A Lumi interpreta ingredientes difíceis e ajuda você a entender possíveis riscos.
+        </p>
       </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">💬</div>
+        <h3>Pergunte antes de consumir</h3>
+        <p>
+          Tire dúvidas sobre marcas, produtos e segurança alimentar diretamente no WhatsApp.
+        </p>
+      </div>
+
     </div>
+
   </div>
 </section>
 
-<section class="perguntas">
-  <div class="perguntas-container">
+<!-- CHAT -->
+<section>
+  <div class="container">
 
-    <div class="perguntas-texto">
-      <h2>Como a Lumi pode te ajudar?</h2>
-      <p>
-        A Lumi é um chatbot especializado em segurança para celíacos.
-        Ela utiliza múltiplas verificações e interpreta imagens e nomes de cidade para oferecer respostas seguras.
-        <br><br>
-        Algumas perguntas são mais claras e objetivas — e isso
-        ajuda a Lumi a te orientar com ainda mais precisão.
-      </p>
+    <h2>
+      Converse com a Lumi como conversaria com uma amiga
+    </h2>
+
+    <p class="section-subtitle">
+      A ideia é simples: você não precisa pesquisar tudo sozinha.
+    </p>
+
+    <div class="chat-demo">
+
+      <div class="chat-box">
+
+        <div class="message-user">
+          Esse chocolate é seguro?
+        </div>
+
+        <div class="message-bot">
+          A marca informou que não utiliza ingredientes com glúten, mas existe risco de contaminação cruzada na fábrica. ✨
+        </div>
+
+      </div>
+
+      <div class="chat-box">
+
+        <div class="message-user">
+          Tem hamburgueria sem glúten em Curitiba?
+        </div>
+
+        <div class="message-bot">
+          Encontrei algumas opções recomendadas pela comunidade celíaca na sua região 🍔✨
+        </div>
+
+      </div>
+
+      <div class="chat-box">
+
+        <div class="message-user">
+          *envia foto da composição*
+        </div>
+
+        <div class="message-bot">
+          Identifiquei ingredientes que merecem atenção. Vale verificar risco de contaminação cruzada para maior segurança.
+        </div>
+
+      </div>
+
     </div>
 
-    <div class="perguntas-cards">
-      <div class="card-pergunta">Dicas de confeitaria em Florianópolis?</div>
-      <div class="card-pergunta">Tem restaurantes seguros em Curitiba?</div>
-      <div class="card-pergunta">Onde posso comer hambúrguer em São Paulo?</div>
-      <div class="card-pergunta">Ou apenas enviar a foto da composição! 📸</div>
+    <div style="text-align:center;margin-top:50px;">
+      <a href="https://wa.me/SEUNUMEROAQUI" class="btn">
+        Tirar minha dúvida agora
+      </a>
     </div>
 
   </div>
 </section>
 
-<!-- DEMO -->
-<section class="section">
+<!-- GALERIA -->
+<section>
   <div class="container">
-    <h2>Veja a Lumi em ação</h2>
+
+    <h2>
+      A Lumi foi criada para reduzir a insegurança da rotina celíaca
+    </h2>
+
+    <p class="section-subtitle">
+      Tudo acontece no WhatsApp, de forma prática e acolhedora.
+    </p>
+
     <div class="gallery">
       <img src="lumi_1.JPG">
       <img src="lumi_3.JPG">
@@ -387,135 +656,269 @@ footer {
       <img src="lumi_7.jpeg">
       <img src="lumi_8.jpeg">
     </div>
+
   </div>
 </section>
 
-<!-- NÚMEROS DA LUMI -->
-<section class="stats-section">
-  <div class="stats-container">
-    <div class="stat-card">
-      <div class="stat-number">+20</div>
-      <div class="stat-label">Cidades no Brasil</div>
+<!-- TRUST -->
+<section class="trust">
+  <div class="container">
+
+    <h2>
+      O que a Lumi considera nas respostas?
+    </h2>
+
+    <div class="trust-grid">
+
+      <div class="trust-card">
+        ✔ Ingredientes informados pelas marcas
+      </div>
+
+      <div class="trust-card">
+        ✔ Possível risco de contaminação cruzada
+      </div>
+
+      <div class="trust-card">
+        ✔ Respostas oficiais de SAC
+      </div>
+
+      <div class="trust-card">
+        ✔ Recomendações da comunidade celíaca
+      </div>
+
+      <div class="trust-card">
+        ✔ Atualizações constantes
+      </div>
+
     </div>
-    
-    <div class="stat-card">
-      <div class="stat-number">+100</div>
-      <div class="stat-label">Estabelecimentos recomendados pela comunidade celíaca</div>
+
+    <div class="warning-box">
+      <strong>Importante:</strong>
+      A Lumi ajuda na tomada de decisão e busca trazer informações mais claras para o dia a dia. Ainda assim, cada pessoa deve avaliar seu próprio nível de segurança e sensibilidade ao glúten.
     </div>
 
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="section">
+<section>
   <div class="container">
-    <h2>A Lumi já começou a ajudar alguns celíacos</h2>
-    <div class="testimonials">
+
+    <h2>
+      A Lumi já começou a ajudar pessoas celíacas
+    </h2>
+
+    <div class="testimonials-grid">
+
       <div class="testimonial">
-        "Usei a Lumi em loja de maquiagem e fiz a compra rapidinho! Ela leu os ingredientes e já respondeu, fiquei muito feliz!"
-        <br><strong>— Cíntia</strong>
+        “Pela primeira vez senti que não precisava pesquisar tudo sozinha.”
+        <br><br>
+        <strong>— Cíntia</strong>
       </div>
+
       <div class="testimonial">
-        "Descobri um lugar sem glúten na minha cidade que eu nem sabia que existia!"
-        <br><strong>— Mariana</strong>
+        “Descobri um lugar sem glúten na minha cidade que eu nem sabia que existia.”
+        <br><br>
+        <strong>— Mariana</strong>
       </div>
+
       <div class="testimonial">
-        "A Lumi é a ajuda que eu precisava principalmente no começo do diagnóstico, adorei!"
-        <br><strong>— Renata</strong>
+        “A Lumi é a ajuda que eu gostaria de ter tido no começo do diagnóstico.”
+        <br><br>
+        <strong>— Renata</strong>
       </div>
+
     </div>
+
   </div>
 </section>
 
-<section class="section">
+<!-- ROADMAP -->
+<section class="roadmap">
   <div class="container">
-    <h2>Vem por aí ✨</h2>
 
-    <div style="max-width:700px;margin:auto;text-align:center;">
-      <p>
-        A Lumi está indo além da leitura de ingredientes em cosméticos e indicação de lugares seguros.
+    <h2>
+      Em breve na Lumi ✨
+    </h2>
 
-        <p>
-        Ela está entrando em contato direto com marcas, fazendo as perguntas certas sobre processos, risco de contaminação cruzada e segurança para celíacos — tudo para trazer respostas mais confiáveis para o seu dia a dia.
-        Enquanto você vive sua rotina, a Lumi faz esse trabalho por trás: coleta informações, organiza os dados e transforma tudo em respostas simples no WhatsApp, sempre que você precisar.
-        </p>
+    <div class="roadmap-grid">
 
-        <p>
-        Além disso, ela vai reunir os retornos das marcas em uma newsletter mensal, para que você tenha acesso a informações atualizadas e transparentes sempre que quiser.
-        A ideia é simples: você não precisa mais correr atrás dessas respostas.
-        </p>
-        <p>
-        A Lumi faz isso por você — para que você possa viver com mais tranquilidade, confiança e liberdade. ✨
-        </p>
-      </p>
+      <div class="roadmap-card">
+        📩 Consulta de respostas oficiais de marcas
+      </div>
+
+      <div class="roadmap-card">
+        📚 Histórico organizado de SAC
+      </div>
+
+      <div class="roadmap-card">
+        🌎 Lugares sem glúten ao redor do mundo
+      </div>
+
+      <div class="roadmap-card">
+        📰 Newsletter mensal sobre segurança alimentar
+      </div>
+
     </div>
+
   </div>
 </section>
 
 <!-- PRICING -->
-<section class="section">
+<section>
   <div class="container">
-    <h2>Assinatura</h2>
+
+    <h2>
+      Mais tranquilidade no seu dia a dia
+    </h2>
+
+    <p class="section-subtitle">
+      Tudo isso por menos que um café sem glúten por semana ☕✨
+    </p>
+
     <div class="pricing-box">
-      <h3>Acesso completo</h3>
-      <div class="price">R$9,90/mês</div>
-      <p>
-        ✔ Consultas ilimitadas de marcas<br>
-        ✔ Análise da presença de glúten em cosméticos<br>
-        ✔ Lista de locais confiáveis no Brasil<br>
-        ✔ Atualizações constantes
-      </p>
-      <a href="https://wa.me/SEUNUMEROAQUI" class="btn">Assinar agora</a>
-    </div>
-  </div>
-</section>
 
-<!-- SOBRE A JU -->
-<section class="section" style="background: linear-gradient(135deg, #f9fcff, #fff6fb);">
-  <div style="max-width:1300px;margin:auto;display:flex;flex-wrap:wrap;align-items:center;gap:60px;padding:0 40px;">
-    
-    <!-- FOTO -->
-    <div style="flex:0 0 220px;text-align:center;">
-      <img src="ju_profile.jpeg" 
-           alt="Ju - Criadora da Lumi" 
-           style="width:300px;border-radius:25px;box-shadow:0 15px 30px rgba(0,0,0,0.08);">
-    </div>
+      <h3>
+        Acesso completo
+      </h3>
 
-    <!-- TEXTO -->
-    <div style="flex:1;min-width:300px;">
-      <h2>Prazer, eu sou a Ju</h2>
+      <div class="price">
+        R$9,90
+      </div>
 
       <p>
-       Sou celíaca há 14 anos, praticamente o mesmo tempo em que vivo e respiro tecnologia.
-       Ao longo desse caminho, aprendi na prática como pode ser difícil ter certeza do que é realmente seguro consumir.
+        por mês
       </p>
 
-      <p>
-        Essa insegurança constante foi o que me motivou a criar a Lumi.
-        A ideia era simples: usar tecnologia para transformar dúvida em clareza.
-        Hoje, a Lumi é uma assistente inteligente no WhatsApp que, em segundos, ajuda a descobrir se um produto cosmético possui ingredientes
-        com glúten.
-      <p>
-        Com o tempo, percebi que essa necessidade de segurança não está só no supermercado.
-        Ela também aparece quando viajamos, saímos para comer ou exploramos um novo lugar.
-        Por isso, a Lumi também indica lugares sem glúten confiáveis no Brasil (e em breve no mundo!) — para que você possa viver experiências novas com mais tranquilidade.
-      </p>
-
-      <p style="font-weight:500;">
-        A Lumi nasceu para que pessoas celíacas vivam com mais independência, leveza e confiança.
-        E eu tenho certeza de que ela vai se tornar sua melhor amiga sem glúten daqui pra frente ✨
-      </p>
+      <ul>
+        <li>✔ Consultas sobre marcas</li>
+        <li>✔ Análise de ingredientes por foto</li>
+        <li>✔ Indicação de lugares sem glúten</li>
+        <li>✔ Atualizações constantes</li>
+        <li>✔ Tudo direto no WhatsApp</li>
+      </ul>
 
       <a href="https://wa.me/SEUNUMEROAQUI" class="btn">
         Começar agora
       </a>
+
     </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="container about-content">
+
+    <div class="about-image">
+      <img src="ju_profile.jpeg" alt="Ju">
+    </div>
+
+    <div class="about-text">
+
+      <h2>
+        Prazer, eu sou a Ju ✨
+      </h2>
+
+      <p>
+        Depois de 14 anos convivendo com a doença celíaca, eu conheço bem a exaustão de precisar pesquisar tudo antes de consumir.
+      </p>
+
+      <p>
+        Ao longo desses anos, percebi que a parte mais difícil nem sempre é viver sem glúten — mas sim conviver diariamente com a insegurança.
+      </p>
+
+      <p>
+        A Lumi nasceu justamente da ferramenta que eu gostaria de ter tido durante toda essa jornada.
+      </p>
+
+      <p>
+        A ideia era simples: transformar dúvida em clareza usando tecnologia de uma forma acolhedora, prática e realmente útil para quem vive a rotina celíaca.
+      </p>
+
+      <p>
+        Hoje, a Lumi ajuda pessoas a entender ingredientes, descobrir lugares mais seguros e encontrar informações com mais tranquilidade — tudo diretamente no WhatsApp.
+      </p>
+
+      <p>
+        Porque celíaco já precisa se preocupar com coisa demais.
+      </p>
+
+      <a href="https://wa.me/SEUNUMEROAQUI" class="btn">
+        Conversar com a Lumi
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+
+    <h2>
+      Perguntas frequentes
+    </h2>
+
+    <div class="faq-container">
+
+      <div class="faq-item">
+        <h3>A Lumi substitui orientação médica?</h3>
+        <p>
+          Não. A Lumi ajuda na busca por informações e segurança alimentar no dia a dia.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>A Lumi garante que um produto é 100% seguro?</h3>
+        <p>
+          A Lumi reúne informações sobre ingredientes, marcas e risco de contaminação cruzada, mas a decisão final deve sempre ser individual.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Como a Lumi funciona?</h3>
+        <p>
+          Tudo acontece diretamente no WhatsApp ✨
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Posso enviar fotos?</h3>
+        <p>
+          Sim! Você pode enviar fotos de ingredientes e composições para análise.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="final-cta">
+  <div class="container">
+
+    <h2>
+      Menos medo. Mais autonomia.
+    </h2>
+
+    <p>
+      Você já precisa se preocupar com coisa demais.
+      A Lumi ajuda no resto ✨
+    </p>
+
+    <a href="https://wa.me/SEUNUMEROAQUI" class="btn">
+      Testar a Lumi agora
+    </a>
 
   </div>
 </section>
 
 <footer>
-  © 2026 Lumi ✨ | Assistente para Celíacos
+  © 2026 Lumi ✨ | Uma companhia para a rotina sem glúten
 </footer>
 
 </body>
