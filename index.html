@@ -388,30 +388,63 @@ h2 {
   box-shadow: 0 4px 14px rgba(255,155,200,0.15);
 }
 
-/* Novo: caixa Pix info */
-.pix-info {
+/* Novo: passo a passo assinatura */
+.pix-steps {
   background: white;
   border-radius: 20px;
-  padding: 22px 28px;
+  padding: 26px 28px;
   margin-top: 24px;
-  font-size: 15px;
-  color: #555;
   border: 1.5px solid #eaf7ff;
   text-align: left;
-  line-height: 1.7;
 }
 
-.pix-info strong {
-  display: block;
-  margin-bottom: 6px;
+.pix-steps-title {
+  font-size: 14px;
+  font-weight: 600;
   color: var(--texto);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
-.pix-info-nota {
-  font-size: 13px;
-  color: #999;
-  margin-top: 12px;
+.pix-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.pix-step:last-child {
+  margin-bottom: 0;
+}
+
+.pix-step-num {
+  background: linear-gradient(135deg, #ff9bc8, #78c7f3);
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.pix-nota {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #f0f0f0;
   font-style: italic;
+  line-height: 1.6;
 }
 
 /* ABOUT */
@@ -592,7 +625,7 @@ h2 {
       <div class="pain-card">
         <h3>📦 Ler o mesmo rótulo várias vezes</h3>
         <p>
-          E ainda sair da loja sem ter certeza se aquilo era realmente seguro.
+          E ainda sair da loja sem ter certeza se aquele cosmético era realmente seguro.
         </p>
       </div>
 
@@ -648,7 +681,7 @@ h2 {
         <div class="feature-icon">📸</div>
         <h3>Tire foto do rótulo</h3>
         <p>
-          A Lumi interpreta ingredientes difíceis e ajuda você a entender possíveis riscos.
+          A Lumi interpreta ingredientes difíceis e ajuda você a entender possíveis riscos em cosméticos ou produtos de higiene.
         </p>
       </div>
 
@@ -682,11 +715,17 @@ h2 {
       <div class="chat-box">
 
         <div class="message-user">
-          Esse chocolate é seguro?
+          A marca XXX é segura?
         </div>
 
         <div class="message-bot">
-          A marca informou que não utiliza ingredientes com glúten, mas existe risco de contaminação cruzada na fábrica. ✨
+          A XXX já respondeu aos meus questionamentos! ✨
+
+          No dia 14/05/2026 eu recebi a seguinte resposta:
+          
+          Aqui o glúten é proibido! Todas as nossas matérias-primas são certificadas e os nossos fornecedores são previamente homologados através de visitas técnicas para garantir a ausência de glúten nos ingredientes que nos serão fornecidos. Não utilizamos trigo, cevada, centeio ou aveia, nem seus derivados. E realizamos testes frequentes em laboratórios para certificar que os nossos alimentos não contêm glúten. Aqui não existe possibilidade de haver contaminação cruzada, pois os nossos maquinários são utilizados exclusivamente para a produção de alimentos livres de glúten. E para garantir a sua segurança, nós instruímos os nossos colaboradores a não trazerem alimentos com glúten para a empresa.
+          
+          Espero que essa resposta te ajude a tomar a melhor decisão para você! ✨
         </div>
 
       </div>
@@ -698,7 +737,11 @@ h2 {
         </div>
 
         <div class="message-bot">
-          Encontrei algumas opções recomendadas pela comunidade celíaca na sua região 🍔✨
+          Claro! ✨
+          Esses são os lugares sem glúten que recomendo em Curitiba-PR para Pizzas:
+          * Local 1
+          * Local 2
+          * Local 3
         </div>
 
       </div>
@@ -710,7 +753,7 @@ h2 {
         </div>
 
         <div class="message-bot">
-          Identifiquei ingredientes que merecem atenção. Vale verificar risco de contaminação cruzada para maior segurança.
+          Este produto não contém glúten em sua composição! Aproveite ✨
         </div>
 
       </div>
@@ -910,7 +953,11 @@ h2 {
     <h2>
       Uma assinatura simples e transparente
     </h2>
-    
+
+    <p class="section-subtitle">
+      Tudo isso por menos que um café sem glúten por semana ☕✨
+    </p>
+
     <div class="pricing-box">
 
       <div class="curadoria-seal">
@@ -941,10 +988,34 @@ h2 {
         Começar agora
       </a>
 
-      <div class="pix-info">
-        <strong>💸 Como funciona a assinatura?</strong>
-        A Lumi funciona por assinatura mensal via Pix recorrente. Sem cartão de crédito. Sem burocracia. Sem letras pequenas.
-        <p class="pix-info-nota">Parte das verificações e pesquisas da Lumi são feitas com cuidado e atenção humana para garantir mais qualidade nas respostas.</p>
+      <div class="pix-steps">
+
+        <div class="pix-steps-title">
+          💸 Como funciona a assinatura?
+        </div>
+
+        <div class="pix-step">
+          <div class="pix-step-num">1</div>
+          <span>Clique em "Começar agora" e me chame no WhatsApp</span>
+        </div>
+
+        <div class="pix-step">
+          <div class="pix-step-num">2</div>
+          <span>Você recebe minha chave Pix e as instruções</span>
+        </div>
+
+        <div class="pix-step">
+          <div class="pix-step-num">3</div>
+          <span>Configure o Pix com repetição mensal no seu banco — é simples e eu te explico o passo a passo se precisar ✨</span>
+        </div>
+
+        <div class="pix-step">
+          <div class="pix-step-num">4</div>
+          <span>Pronto! Você já é assinante da Lumi</span>
+        </div>
+
+        <p class="pix-nota">Sem cartão de crédito. Sem plataforma. Sem letras pequenas. Você pode cancelar quando quiser — é só parar o Pix agendado no seu banco.</p>
+
       </div>
 
     </div>
@@ -957,7 +1028,7 @@ h2 {
   <div class="container about-content">
 
     <div class="about-image">
-      <img src="ju_profile.jpg" alt="Ju">
+      <img src="ju_profile.jpeg" alt="Ju">
     </div>
 
     <div class="about-text">
@@ -1012,7 +1083,14 @@ h2 {
       <div class="faq-item">
         <h3>Como funciona a assinatura?</h3>
         <p>
-          A Lumi funciona através de uma assinatura mensal via Pix recorrente. O processo é simples, direto e sem necessidade de cartão de crédito. Sem burocracia, sem letras pequenas.
+          É simples! Você me chama no WhatsApp, recebe minha chave Pix e configura um Pix com repetição mensal direto no app do seu banco. Sem cartão de crédito, sem plataforma, sem burocracia. Se tiver dúvida na configuração, é só me perguntar — eu te explico o passo a passo 😊
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Como faço para cancelar?</h3>
+        <p>
+          É só parar o Pix agendado no seu banco. Você tem total controle — sem precisar falar com ninguém ou cumprir aviso prévio.
         </p>
       </div>
 
