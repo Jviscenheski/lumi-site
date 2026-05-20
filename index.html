@@ -18,50 +18,14 @@
   --verde: #8dd8b3;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  color: var(--texto);
-  background: white;
-  line-height: 1.7;
-}
-
-.container {
-  width: 90%;
-  max-width: 1180px;
-  margin: auto;
-}
-
-section {
-  padding: 90px 0;
-}
-
-h1, h2, h3 {
-  line-height: 1.2;
-}
-
-h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.section-subtitle {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 60px;
-  color: var(--cinza);
-  font-size: 18px;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Poppins', sans-serif; color: var(--texto); background: white; line-height: 1.7; }
+.container { width: 90%; max-width: 1180px; margin: auto; }
+section { padding: 90px 0; }
+h1, h2, h3 { line-height: 1.2; }
+h2 { font-size: 36px; margin-bottom: 20px; text-align: center; }
+.section-subtitle { text-align: center; max-width: 700px; margin: 0 auto 60px; color: var(--cinza); font-size: 18px; }
 
 .btn {
   display: inline-block;
@@ -74,724 +38,722 @@ h2 {
   transition: 0.3s ease;
   box-shadow: 0 10px 30px rgba(255, 158, 203, 0.35);
 }
-
-.btn:hover {
-  transform: translateY(-3px);
-  background: var(--azul-escuro);
-}
-
-.btn-secondary {
-  margin-left: 16px;
-  color: var(--texto);
-  text-decoration: none;
-  font-weight: 500;
-}
+.btn:hover { transform: translateY(-3px); background: var(--azul-escuro); }
+.btn-secondary { margin-left: 16px; color: var(--texto); text-decoration: none; font-weight: 500; }
 
 /* HERO */
-.hero {
-  background: linear-gradient(135deg, #eef9ff, #fff4f9);
-  padding: 120px 0 90px;
-}
-
-.hero-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 60px;
-}
-
-.hero-text {
-  flex: 1;
-  min-width: 320px;
-}
-
-.hero-badge {
-  display: inline-block;
-  background: white;
-  padding: 10px 18px;
-  border-radius: 999px;
-  font-size: 14px;
-  margin-bottom: 25px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-}
-
-.hero h1 {
-  font-size: 60px;
-  margin-bottom: 24px;
-  color: #2d2d2d;
-}
-
-.hero p {
-  font-size: 20px;
-  color: #5f5f5f;
-  max-width: 620px;
-}
-
-.hero-small {
-  margin-top: 24px;
-  font-size: 16px !important;
-  color: #777 !important;
-}
-
-.hero-image {
-  flex: 1;
-  text-align: center;
-}
-
-.hero-image img {
-  width: 320px;
-  border-radius: 42px;
-  box-shadow: 0 25px 50px rgba(0,0,0,0.12);
-}
+.hero { background: linear-gradient(135deg, #eef9ff, #fff4f9); padding: 120px 0 90px; }
+.hero-content { display: flex; flex-wrap: wrap; align-items: center; gap: 60px; }
+.hero-text { flex: 1; min-width: 320px; }
+.hero-badge { display: inline-block; background: white; padding: 10px 18px; border-radius: 999px; font-size: 14px; margin-bottom: 25px; box-shadow: 0 8px 20px rgba(0,0,0,0.05); }
+.hero h1 { font-size: 60px; margin-bottom: 24px; color: #2d2d2d; }
+.hero p { font-size: 20px; color: #5f5f5f; max-width: 620px; }
+.hero-small { margin-top: 24px; font-size: 16px !important; color: #777 !important; }
+.hero-image { flex: 1; text-align: center; }
+.hero-image img { width: 320px; border-radius: 42px; box-shadow: 0 25px 50px rgba(0,0,0,0.12); }
 
 /* DOR */
-.pain {
-  background: white;
-}
-
-.pain-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  margin-top: 50px;
-}
-
-.pain-card {
-  background: linear-gradient(135deg, #fff5f9, #eef8ff);
-  padding: 30px;
-  border-radius: 24px;
-  box-shadow: 0 12px 25px rgba(0,0,0,0.04);
-}
-
-.pain-card h3 {
-  margin-bottom: 12px;
-}
+.pain { background: white; }
+.pain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 50px; }
+.pain-card { background: linear-gradient(135deg, #fff5f9, #eef8ff); padding: 30px; border-radius: 24px; box-shadow: 0 12px 25px rgba(0,0,0,0.04); }
+.pain-card h3 { margin-bottom: 12px; }
 
 /* FEATURES */
-.features {
-  background: linear-gradient(135deg, #f9fcff, #fff7fb);
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-.feature-card {
-  background: white;
-  padding: 35px;
-  border-radius: 28px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-  transition: 0.3s ease;
-}
-
-.feature-card:hover {
-  transform: translateY(-8px);
-}
-
-.feature-card h3 {
-  margin: 20px 0 12px;
-}
-
-.feature-icon {
-  font-size: 38px;
-}
+.features { background: linear-gradient(135deg, #f9fcff, #fff7fb); }
+.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.feature-card { background: white; padding: 35px; border-radius: 28px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); transition: 0.3s ease; }
+.feature-card:hover { transform: translateY(-8px); }
+.feature-card h3 { margin: 20px 0 12px; }
+.feature-icon { font-size: 38px; }
 
 /* CHAT */
-.chat-demo {
-  max-width: 900px;
-  margin: auto;
-}
-
-.chat-box {
-  background: #f7f7f7;
-  border-radius: 30px;
-  padding: 40px;
-  margin-bottom: 30px;
-}
-
-.message-user,
-.message-bot {
-  max-width: 75%;
-  padding: 18px 22px;
-  border-radius: 24px;
-  margin-bottom: 16px;
-  font-size: 15px;
-}
-
-.message-user {
-  background: #dcf8c6;
-  margin-left: auto;
-}
-
-.message-bot {
-  background: white;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-}
+.chat-demo { max-width: 900px; margin: auto; }
+.chat-box { background: #f7f7f7; border-radius: 30px; padding: 40px; margin-bottom: 30px; }
+.message-user, .message-bot { max-width: 75%; padding: 18px 22px; border-radius: 24px; margin-bottom: 16px; font-size: 15px; }
+.message-user { background: #dcf8c6; margin-left: auto; }
+.message-bot { background: white; box-shadow: 0 8px 20px rgba(0,0,0,0.05); }
 
 /* GALLERY */
-.gallery {
-  column-count: 3;
-  column-gap: 25px;
-}
-
-.gallery img {
-  width: 100%;
-  margin-bottom: 25px;
-  border-radius: 24px;
-  break-inside: avoid;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
+.gallery { column-count: 3; column-gap: 25px; }
+.gallery img { width: 100%; margin-bottom: 25px; border-radius: 24px; break-inside: avoid; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
 
 /* TRUST */
-.trust {
-  background: linear-gradient(135deg, #eef9ff, #fff4fa);
-}
-
-.trust-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 24px;
-  margin-top: 40px;
-}
-
-.trust-card {
-  background: white;
-  padding: 28px;
-  border-radius: 24px;
-  box-shadow: 0 12px 25px rgba(0,0,0,0.05);
-}
-
-.warning-box {
-  background: #fff8df;
-  padding: 28px;
-  border-radius: 24px;
-  margin-top: 40px;
-  border: 1px solid #f4e1a1;
-}
+.trust { background: linear-gradient(135deg, #eef9ff, #fff4fa); }
+.trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 40px; }
+.trust-card { background: white; padding: 28px; border-radius: 24px; box-shadow: 0 12px 25px rgba(0,0,0,0.05); }
+.warning-box { background: #fff8df; padding: 28px; border-radius: 24px; margin-top: 40px; border: 1px solid #f4e1a1; }
 
 /* TESTIMONIALS */
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-}
-
-.testimonial {
-  background: linear-gradient(135deg, #eef8ff, #fff4f9);
-  padding: 35px;
-  border-radius: 28px;
-}
+.testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+.testimonial { background: linear-gradient(135deg, #eef8ff, #fff4f9); padding: 35px; border-radius: 28px; }
 
 /* ROADMAP */
-.roadmap {
-  background: white;
-}
+.roadmap { background: white; }
+.roadmap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 40px; }
+.roadmap-card { padding: 30px; border-radius: 24px; background: linear-gradient(135deg, #fff5fa, #eef7ff); }
 
-.roadmap-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 24px;
-  margin-top: 40px;
-}
+/* BASTIDORES */
+.bastidores { background: linear-gradient(135deg, #f0fdf7, #fff4fb); }
+.bastidores-inner { max-width: 860px; margin: auto; text-align: center; }
+.bastidores-inner h2 { margin-bottom: 24px; }
+.bastidores-inner p { font-size: 18px; color: #555; margin-bottom: 20px; line-height: 1.85; }
+.bastidores-pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 40px; }
+.bastidores-pillar { background: white; padding: 26px 20px; border-radius: 22px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); font-weight: 500; font-size: 15px; }
+.bastidores-pillar .pillar-icon { font-size: 30px; margin-bottom: 10px; display: block; }
 
-.roadmap-card {
-  padding: 30px;
-  border-radius: 24px;
-  background: linear-gradient(135deg, #fff5fa, #eef7ff);
-}
+/* CURADORIA SEAL */
+.curadoria-seal { display: inline-flex; align-items: center; gap: 8px; background: white; border: 1.5px solid #ff9bc8; color: #cc6699; font-size: 13px; font-weight: 600; padding: 8px 18px; border-radius: 999px; margin-bottom: 24px; box-shadow: 0 4px 14px rgba(255,155,200,0.15); }
 
-/* BASTIDORES (nova seção) */
-.bastidores {
-  background: linear-gradient(135deg, #f0fdf7, #fff4fb);
-}
-
-.bastidores-inner {
-  max-width: 860px;
-  margin: auto;
-  text-align: center;
-}
-
-.bastidores-inner h2 {
-  margin-bottom: 24px;
-}
-
-.bastidores-inner p {
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 20px;
-  line-height: 1.85;
-}
-
-.bastidores-pillars {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  margin-top: 40px;
-}
-
-.bastidores-pillar {
-  background: white;
-  padding: 26px 20px;
-  border-radius: 22px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-  font-weight: 500;
-  font-size: 15px;
-}
-
-.bastidores-pillar .pillar-icon {
-  font-size: 30px;
-  margin-bottom: 10px;
-  display: block;
-}
+/* PIX STEPS */
+.pix-steps { background: white; border-radius: 20px; padding: 26px 28px; margin-top: 24px; border: 1.5px solid #eaf7ff; text-align: left; }
+.pix-steps-title { font-size: 14px; font-weight: 600; color: var(--texto); margin-bottom: 16px; display: flex; align-items: center; gap: 6px; }
+.pix-step { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 12px; font-size: 14px; color: #555; line-height: 1.5; }
+.pix-step:last-child { margin-bottom: 0; }
+.pix-step-num { background: linear-gradient(135deg, #ff9bc8, #78c7f3); color: white; font-size: 12px; font-weight: 700; width: 24px; height: 24px; border-radius: 999px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+.pix-nota { font-size: 12px; color: #aaa; margin-top: 16px; padding-top: 14px; border-top: 1px solid #f0f0f0; font-style: italic; line-height: 1.6; }
 
 /* PRICING */
-.pricing-box {
-  max-width: 560px;
-  margin: auto;
-  background: linear-gradient(135deg, #fff0f7, #edf8ff);
-  padding: 55px;
-  border-radius: 32px;
+.pricing-box { max-width: 560px; margin: auto; background: linear-gradient(135deg, #fff0f7, #edf8ff); padding: 55px; border-radius: 32px; text-align: center; box-shadow: 0 25px 50px rgba(0,0,0,0.08); }
+.price { font-size: 54px; font-weight: 700; margin: 20px 0; }
+.pricing-box ul { list-style: none; margin: 30px 0; }
+.pricing-box li { margin-bottom: 14px; }
+
+/* ABOUT */
+.about { background: linear-gradient(135deg, #f8fcff, #fff5fa); }
+.about-content { display: flex; flex-wrap: wrap; gap: 60px; align-items: center; }
+.about-image img { width: 320px; border-radius: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+.about-text { flex: 1; min-width: 320px; }
+.about-text h2 { text-align: left; }
+.about-text p { margin-bottom: 20px; }
+
+/* FAQ */
+.faq { background: white; }
+.faq-container { max-width: 850px; margin: auto; }
+.faq-item { background: #fafafa; border-radius: 20px; padding: 28px; margin-bottom: 20px; }
+.faq-item h3 { margin-bottom: 10px; }
+
+/* CTA FINAL */
+.final-cta { background: linear-gradient(135deg, #78c7f3, #ff9bc8); color: white; text-align: center; }
+.final-cta h2 { color: white; font-size: 46px; }
+.final-cta p { font-size: 20px; max-width: 700px; margin: 20px auto 40px; }
+.final-cta .btn { background: white; color: #ff88bb; }
+
+/* ========================================
+   GLOBAL MAP
+   ======================================== */
+
+.global-section {
+  padding: 110px 0;
+  background:
+    radial-gradient(circle at top left, rgba(120,199,243,0.18), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(255,155,200,0.18), transparent 30%),
+    linear-gradient(135deg, #f8fcff, #fff6fb);
+  overflow: hidden;
+}
+
+.global-header {
   text-align: center;
-  box-shadow: 0 25px 50px rgba(0,0,0,0.08);
+  max-width: 760px;
+  margin: 0 auto 60px;
 }
 
-.price {
-  font-size: 54px;
-  font-weight: 700;
-  margin: 20px 0;
-}
-
-.pricing-box ul {
-  list-style: none;
-  margin: 30px 0;
-}
-
-.pricing-box li {
-  margin-bottom: 14px;
-}
-
-/* Novo: selo de curadoria */
-.curadoria-seal {
+.global-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   background: white;
-  border: 1.5px solid #ff9bc8;
-  color: #cc6699;
+  padding: 10px 18px;
+  border-radius: 999px;
   font-size: 13px;
   font-weight: 600;
-  padding: 8px 18px;
+  color: #cc6699;
+  border: 1px solid #f2dce9;
+  margin-bottom: 26px;
+}
+
+.world-map-card {
+  position: relative;
+  max-width: 1000px;
+  margin: 20px auto 0;
+  padding: 20px 0;
+}
+
+.map-crop{
+  width:100%;
+  height:600px;
+  overflow:hidden;
+  position:relative;
+  border-radius:32px;
+}
+
+.world-map{
+  position:absolute;
+
+  width:115%;
+  max-width:none;
+
+  left:-6%;
+  top:-2%;
+
+  opacity:0.30;
+}
+
+/* glow ambiente */
+.map-glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at center, rgba(120,199,243,0.08), transparent 60%);
+  pointer-events: none;
+}
+
+/* DOTS */
+.map-dot {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background: #ff9bc8;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 0 rgba(255,155,200,0.7);
+  animation: pulse 2.4s infinite;
+}
+
+.map-dot::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.35);
+}
+
+/* ========================================
+   COMMUNITY
+======================================== */
+
+.community-section{
+  padding:100px 0;
+  background:
+    linear-gradient(135deg,#f8fcff,#fff6fb);
+}
+
+.community-header{
+  text-align:center;
+  max-width:760px;
+  margin:0 auto 60px;
+}
+
+.community-grid{
+  display:grid;
+  grid-template-columns:1.2fr 0.8fr;
+  gap:28px;
+  align-items:start;
+}
+
+.community-column{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.community-title{
+  font-size:22px;
+  margin-bottom:8px;
+  color:#2f2f2f;
+}
+
+.state-card,
+.world-card{
+  background:white;
+  border-radius:26px;
+  padding:24px;
+  box-shadow:0 14px 35px rgba(0,0,0,0.05);
+  border:1px solid #eef3f7;
+}
+
+.state-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:18px;
+}
+
+.state-top strong{
+  font-size:18px;
+}
+
+.state-top span{
+  background:#fff0f7;
+  color:#cc6699;
+  padding:6px 12px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:600;
+}
+
+.city-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.city-tags span,
+.world-card span{
+  background:#f7fafc;
+  border:1px solid #edf1f5;
+  border-radius:999px;
+  padding:8px 14px;
+  font-size:13px;
+}
+
+.world-card{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.world-note{
+  font-size:14px;
+  color:#888;
+  padding-left:4px;
+}
+
+@media(max-width:768px){
+
+  .community-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@keyframes floatCard{
+  0%{
+    transform:translateX(-50%) translateY(0px);
+  }
+
+  50%{
+    transform:translateX(-50%) translateY(-4px);
+  }
+
+  100%{
+    transform:translateX(-50%) translateY(0px);
+  }
+}
+
+/* posições */
+.cluster-pr { left:34%; top:81%; }
+.cluster-sp { left:34%; top:75%; }
+.cluster-sc { left:32%; top:86%; }
+.cluster-rs { left:48%; top:86%; }
+.cluster-rj { left:60%; top:55%; }
+.cluster-mt { left:33%; top:40%; }
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow:
+      0 0 0 0 rgba(255,155,200,0.6);
+  }
+
+  70% {
+    transform: scale(1.12);
+    box-shadow:
+      0 0 0 10px rgba(255,155,200,0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ESTEIRA */
+.cities-marquee {
+  margin-top: 38px;
+  overflow: hidden;
+  position: relative;
+}
+
+.cities-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation: cities-scroll 35s linear infinite;
+}
+
+.cities-track span {
+  background: white;
+  border: 1px solid #f0dfe9;
   border-radius: 999px;
-  margin-bottom: 24px;
-  box-shadow: 0 4px 14px rgba(255,155,200,0.15);
-}
-
-/* Novo: passo a passo assinatura */
-.pix-steps {
-  background: white;
-  border-radius: 20px;
-  padding: 26px 28px;
-  margin-top: 24px;
-  border: 1.5px solid #eaf7ff;
-  text-align: left;
-}
-
-.pix-steps-title {
+  padding: 12px 18px;
   font-size: 14px;
-  font-weight: 600;
-  color: var(--texto);
-  margin-bottom: 16px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  white-space: nowrap;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.04);
 }
 
-.pix-step {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  margin-bottom: 12px;
-  font-size: 14px;
-  color: #555;
-  line-height: 1.5;
-}
+@keyframes cities-scroll {
+  from {
+    transform: translateX(0);
+  }
 
-.pix-step:last-child {
-  margin-bottom: 0;
-}
-
-.pix-step-num {
-  background: linear-gradient(135deg, #ff9bc8, #78c7f3);
-  color: white;
-  font-size: 12px;
-  font-weight: 700;
-  width: 24px;
-  height: 24px;
-  border-radius: 999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  margin-top: 1px;
-}
-
-.pix-nota {
-  font-size: 12px;
-  color: #aaa;
-  margin-top: 16px;
-  padding-top: 14px;
-  border-top: 1px solid #f0f0f0;
-  font-style: italic;
-  line-height: 1.6;
-}
-
-/* ABOUT */
-.about {
-  background: linear-gradient(135deg, #f8fcff, #fff5fa);
-}
-
-.about-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 60px;
-  align-items: center;
-}
-
-.about-image img {
-  width: 320px;
-  border-radius: 30px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-}
-
-.about-text {
-  flex: 1;
-  min-width: 320px;
-}
-
-.about-text h2 {
-  text-align: left;
-}
-
-.about-text p {
-  margin-bottom: 20px;
-}
-
-/* FAQ */
-.faq {
-  background: white;
-}
-
-.faq-container {
-  max-width: 850px;
-  margin: auto;
-}
-
-.faq-item {
-  background: #fafafa;
-  border-radius: 20px;
-  padding: 28px;
-  margin-bottom: 20px;
-}
-
-.faq-item h3 {
-  margin-bottom: 10px;
-}
-
-/* CTA FINAL */
-.final-cta {
-  background: linear-gradient(135deg, #78c7f3, #ff9bc8);
-  color: white;
-  text-align: center;
-}
-
-.final-cta h2 {
-  color: white;
-  font-size: 46px;
-}
-
-.final-cta p {
-  font-size: 20px;
-  max-width: 700px;
-  margin: 20px auto 40px;
-}
-
-.final-cta .btn {
-  background: white;
-  color: #ff88bb;
-}
-
-footer {
-  padding: 30px;
-  text-align: center;
-  font-size: 14px;
-  background: #f7f7f7;
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 @media(max-width: 768px) {
 
-.hero h1 {
-  font-size: 42px;
+  .global-section {
+    padding: 80px 0;
+  }
+
+  .world-map-card {
+    padding: 24px;
+    border-radius: 28px;
+  }
+
+  .map-dot {
+    width: 9px;
+    height: 9px;
+  }
+
 }
 
-h2 {
-  font-size: 30px;
+footer { padding: 30px; text-align: center; font-size: 14px; background: #f7f7f7; }
+
+/* ========================================
+   ESTEIRA DE MARCAS (nova seção)
+   ======================================== */
+.marcas-section {
+  background: white;
+  padding: 80px 0;
+  overflow: hidden;
 }
 
-.gallery {
-  column-count: 1;
+.marcas-section h2 {
+  margin-bottom: 12px;
 }
 
-.hero {
-  padding-top: 80px;
+.marcas-track-wrapper {
+  position: relative;
+  margin-top: 50px;
+  overflow: hidden;
 }
 
-.final-cta h2 {
-  font-size: 34px;
+/* fade nas bordas */
+.marcas-track-wrapper::before,
+.marcas-track-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.marcas-track-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, white, transparent);
+}
+.marcas-track-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, white, transparent);
 }
 
-.btn-secondary {
+.marcas-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation: scroll-marcas 100s linear infinite;
+}
+
+.marcas-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-marcas {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.marca-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #fafafa;
+  border: 1px solid #f0e8f5;
+  border-radius: 999px;
+  padding: 12px 22px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--texto);
+  white-space: nowrap;
+  transition: background 0.2s, border-color 0.2s;
+  cursor: default;
+}
+
+.marca-pill:hover {
+  background: #fff0f7;
+  border-color: var(--rosa-escuro);
+  color: #cc6699;
+}
+
+.marca-pill .marca-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--rosa-escuro);
+  flex-shrink: 0;
+}
+
+.marcas-nota {
+  text-align: center;
+  margin-top: 36px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* ========================================
+   MAPA DE CIDADES (nova seção)
+   ======================================== */
+.cidades-section {
+  background: linear-gradient(135deg, #f5fbff, #fff5fc);
+  padding: 90px 0;
+}
+
+.cidades-section h2 {
+  margin-bottom: 12px;
+}
+
+.mapa-container {
+  position: relative;
+  margin-top: 50px;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #e8f4fb;
+  border: 1px solid #d4ecf7;
+}
+
+.mapa-svg-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.mapa-svg-wrapper svg {
+  width: 100%;
+  height: auto;
   display: block;
-  margin-top: 20px;
-  margin-left: 0;
 }
 
-.pricing-box {
-  padding: 36px 24px;
+/* pins de cidades */
+.city-pin {
+  cursor: pointer;
+  transition: transform 0.2s;
+  transform-origin: center bottom;
+}
+.city-pin:hover { transform: scale(1.3); }
+
+.city-pin circle.pin-bg {
+  fill: var(--rosa-escuro);
+  stroke: white;
+  stroke-width: 2;
+}
+.city-pin circle.pin-ring {
+  fill: none;
+  stroke: var(--rosa-escuro);
+  stroke-width: 1.5;
+  opacity: 0.35;
 }
 
+/* tooltip */
+.mapa-tooltip {
+  position: absolute;
+  background: white;
+  border: 1px solid #f0d8ea;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--texto);
+  pointer-events: none;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  transform: translate(-50%, -130%);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.15s;
+  z-index: 10;
+}
+.mapa-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-right: 1px solid #f0d8ea;
+  border-bottom: 1px solid #f0d8ea;
+  transform: translateX(-50%) rotate(45deg);
+}
+.mapa-tooltip.visible { opacity: 1; }
+
+/* lista de cidades abaixo do mapa */
+.cidades-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.cidade-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: white;
+  border: 1px solid #f0d8ea;
+  border-radius: 999px;
+  padding: 7px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--texto);
+}
+
+.cidade-tag span.dot {
+  width: 7px;
+  height: 7px;
+  background: var(--rosa-escuro);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+@media(max-width: 768px) {
+  .hero h1 { font-size: 42px; }
+  h2 { font-size: 30px; }
+  .gallery { column-count: 1; }
+  .hero { padding-top: 80px; }
+  .final-cta h2 { font-size: 34px; }
+  .btn-secondary { display: block; margin-top: 20px; margin-left: 0; }
+  .pricing-box { padding: 36px 24px; }
+  .marcas-track-wrapper::before,
+  .marcas-track-wrapper::after { width: 60px; }
 }
 </style>
 </head>
-
 <body>
 
 <!-- HERO -->
 <section class="hero">
   <div class="container hero-content">
-
     <div class="hero-text">
-
-      <div class="hero-badge">
-        ✨ Criada por quem vive sem glúten todos os dias
-      </div>
-
-      <h1>
-        A companhia que faltava na rotina celíaca.
-      </h1>
-
-      <p>
-        A Lumi ajuda celíacos a encontrarem estabelecimentos e informações mais seguras — direto no WhatsApp.
-      </p>
-
-      <p class="hero-small">
-        Porque viver sem glúten já exige preocupação demais.
-      </p>
-
+      <div class="hero-badge">✨ Criada por quem vive sem glúten todos os dias</div>
+      <h1>A companhia que faltava na rotina celíaca.</h1>
+      <p>A Lumi ajuda celíacos a encontrarem estabelecimentos e informações mais seguras — direto no WhatsApp.</p>
+      <p class="hero-small">Porque viver sem glúten já exige preocupação demais.</p>
       <div style="margin-top:40px;">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdcyAqHp8-tWpIPzVzhvIlPYc_TP84dxjy6oMUnArhsPDff4w/viewform?usp=publish-editor" class="btn">
-          Conversar com a Lumi
-        </a>
-
-        <a href="#como-funciona" class="btn-secondary">
-          Ver como funciona
-        </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdcyAqHp8-tWpIPzVzhvIlPYc_TP84dxjy6oMUnArhsPDff4w/viewform?usp=publish-editor" class="btn">Conversar com a Lumi</a>
+        <a href="#como-funciona" class="btn-secondary">Ver como funciona</a>
       </div>
-
     </div>
-
     <div class="hero-image">
       <img src="lumi_profile.png" alt="Lumi">
     </div>
-
   </div>
 </section>
 
 <!-- DOR -->
 <section class="pain">
   <div class="container">
-
-    <h2>
-      Se você é celíaco, provavelmente já passou por isso
-    </h2>
-
-    <p class="section-subtitle">
-      A Lumi nasceu justamente da exaustão de precisar pesquisar tudo antes de consumir.
-    </p>
-
+    <h2>Se você é celíaco, provavelmente já passou por isso</h2>
+    <p class="section-subtitle">A Lumi nasceu justamente da exaustão de precisar pesquisar tudo antes de consumir.</p>
     <div class="pain-grid">
-
       <div class="pain-card">
         <h3>📦 Ler o mesmo rótulo várias vezes</h3>
-        <p>
-          E ainda sair da loja sem ter certeza se aquele cosmético era realmente seguro.
-        </p>
+        <p>E ainda sair da loja sem ter certeza se aquele cosmético era realmente seguro.</p>
       </div>
-
       <div class="pain-card">
         <h3>🍽️ Não confiar em restaurantes</h3>
-        <p>
-          Porque "tem opção sem glúten" nem sempre significa segurança.
-        </p>
+        <p>Porque "tem opção sem glúten" nem sempre significa segurança.</p>
       </div>
-
       <div class="pain-card">
         <h3>📩 Mandar mensagem para marcas</h3>
-        <p>
-          E nunca receber respostas claras sobre contaminação cruzada.
-        </p>
+        <p>E nunca receber respostas claras sobre contaminação cruzada.</p>
       </div>
-
       <div class="pain-card">
         <h3>🎒 Levar comida na bolsa "por garantia"</h3>
-        <p>
-          Porque sair sem planejamento parece arriscado demais.
-        </p>
+        <p>Porque sair sem planejamento parece arriscado demais.</p>
       </div>
-
     </div>
-
   </div>
 </section>
 
 <!-- FEATURES -->
 <section class="features" id="como-funciona">
   <div class="container">
-
-    <h2>
-      A Lumi te ajuda nas dúvidas do dia a dia
-    </h2>
-
-    <p class="section-subtitle">
-      Tudo acontece de forma simples, rápida e acolhedora no WhatsApp.
-    </p>
-
+    <h2>A Lumi te ajuda nas dúvidas do dia a dia</h2>
+    <p class="section-subtitle">Tudo acontece de forma simples, rápida e acolhedora no WhatsApp.</p>
     <div class="features-grid">
-
       <div class="feature-card">
         <div class="feature-icon">🍽️</div>
         <h3>Comer fora com mais confiança</h3>
-        <p>
-          Descubra restaurantes, cafeterias e lugares indicados pela comunidade celíaca.
-        </p>
+        <p>Descubra restaurantes, cafeterias e lugares indicados pela comunidade celíaca.</p>
       </div>
-
       <div class="feature-card">
         <div class="feature-icon">📸</div>
         <h3>Tire foto do rótulo</h3>
-        <p>
-          A Lumi interpreta ingredientes difíceis e ajuda você a entender possíveis riscos em cosméticos ou produtos de higiene.
-        </p>
+        <p>A Lumi interpreta ingredientes difíceis e ajuda você a entender possíveis riscos em cosméticos ou produtos de higiene.</p>
       </div>
-
       <div class="feature-card">
         <div class="feature-icon">💬</div>
         <h3>Pergunte antes de consumir</h3>
-        <p>
-          Consulte as respostas que as marcas deram ao SAC antes de decidir o que colocar no carrinho.
-        </p>
+        <p>Consulte as respostas que as marcas deram ao SAC antes de decidir o que colocar no carrinho.</p>
       </div>
-
     </div>
-
   </div>
 </section>
 
 <!-- CHAT -->
 <section>
   <div class="container">
-
-    <h2>
-      Converse com a Lumi como conversaria com uma amiga
-    </h2>
-
-    <p class="section-subtitle">
-      A ideia é simples: você não precisa pesquisar tudo sozinha.
-    </p>
-
+    <h2>Converse com a Lumi como conversaria com uma amiga</h2>
+    <p class="section-subtitle">A ideia é simples: você não precisa pesquisar tudo sozinha.</p>
     <div class="chat-demo">
-
       <div class="chat-box">
-
-        <div class="message-user">
-          A marca XXX é segura?
-        </div>
-
+        <div class="message-user">A marca XXX é segura?</div>
         <div class="message-bot">
           A XXX já respondeu aos meus questionamentos! ✨
-          <p>
-          No dia 14/05/2026 eu recebi a seguinte resposta:
-          </p>
-          <p>
-          Aqui o glúten é proibido! Todas as nossas matérias-primas são certificadas e os nossos fornecedores são previamente homologados através de visitas técnicas para garantir a ausência de glúten nos ingredientes que nos serão fornecidos. Não utilizamos trigo, cevada, centeio ou aveia, nem seus derivados. E realizamos testes frequentes em laboratórios para certificar que os nossos alimentos não contêm glúten. Aqui não existe possibilidade de haver contaminação cruzada, pois os nossos maquinários são utilizados exclusivamente para a produção de alimentos livres de glúten. E para garantir a sua segurança, nós instruímos os nossos colaboradores a não trazerem alimentos com glúten para a empresa.
-          </p>
-          <p>
-          Espero que essa resposta te ajude a tomar a melhor decisão para você! ✨
-          </p>
+          <p>No dia 14/05/2026 eu recebi a seguinte resposta:</p>
+          <p>Aqui o glúten é proibido! Todas as nossas matérias-primas são certificadas e os nossos fornecedores são previamente homologados através de visitas técnicas para garantir a ausência de glúten nos ingredientes que nos serão fornecidos. Não utilizamos trigo, cevada, centeio ou aveia, nem seus derivados. E realizamos testes frequentes em laboratórios para certificar que os nossos alimentos não contêm glúten. Aqui não existe possibilidade de haver contaminação cruzada, pois os nossos maquinários são utilizados exclusivamente para a produção de alimentos livres de glúten. E para garantir a sua segurança, nós instruímos os nossos colaboradores a não trazerem alimentos com glúten para a empresa.</p>
+          <p>Espero que essa resposta te ajude a tomar a melhor decisão para você! ✨</p>
         </div>
-
       </div>
-
       <div class="chat-box">
-
-        <div class="message-user">
-          Tem dicas de pizza sem glúten em Curitiba?
-        </div>
-
+        <div class="message-user">Tem dicas de pizza sem glúten em Curitiba?</div>
         <div class="message-bot">
           Claro! ✨
-          <p>
-          Esses são os lugares sem glúten que recomendo em Curitiba-PR para Pizzas:
-          </p>
-          <p>
-          * Local 1
-          </p>
-          <p>
-          * Local 2
-          </p>
-          <p>
-          * Local 3
-          </p>
+          <p>Esses são os lugares sem glúten que recomendo em Curitiba-PR para Pizzas:</p>
+          <p>* Local 1</p>
+          <p>* Local 2</p>
+          <p>* Local 3</p>
         </div>
-
       </div>
-
       <div class="chat-box">
-
-        <div class="message-user">
-          *envia foto da composição*
-        </div>
-
-        <div class="message-bot">
-          Este produto não contém glúten em sua composição! Aproveite ✨
-        </div>
-
+        <div class="message-user">*envia foto da composição*</div>
+        <div class="message-bot">Este produto não contém glúten em sua composição! Aproveite ✨</div>
       </div>
-
     </div>
-
     <div style="text-align:center;margin-top:50px;">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdcyAqHp8-tWpIPzVzhvIlPYc_TP84dxjy6oMUnArhsPDff4w/viewform?usp=publish-editor" class="btn">
-        Tirar minha dúvida agora
-      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdcyAqHp8-tWpIPzVzhvIlPYc_TP84dxjy6oMUnArhsPDff4w/viewform?usp=publish-editor" class="btn">Tirar minha dúvida agora</a>
     </div>
-
   </div>
 </section>
 
 <!-- GALERIA -->
 <section>
   <div class="container">
-
-    <h2>
-      A Lumi foi criada para reduzir a insegurança da rotina celíaca
-    </h2>
-
-    <p class="section-subtitle">
-      Tudo acontece no WhatsApp, de forma prática e acolhedora.
-    </p>
-
+    <h2>A Lumi foi criada para reduzir a insegurança da rotina celíaca</h2>
+    <p class="section-subtitle">Tudo acontece no WhatsApp, de forma prática e acolhedora.</p>
     <div class="gallery">
       <img src="lumi_1.JPG">
       <img src="lumi_3.JPG">
@@ -800,55 +762,158 @@ h2 {
       <img src="lumi_7.jpeg">
       <img src="lumi_8.jpeg">
     </div>
-
   </div>
 </section>
 
-<!-- BASTIDORES (nova seção) -->
-<section class="bastidores">
+<!-- ===== ESTEIRA DE MARCAS (nova seção) ===== -->
+<section class="marcas-section">
   <div class="container">
-    <div class="bastidores-inner">
+    <h2>Marcas que a Lumi já consultou 📩</h2>
+    <p class="section-subtitle">
+      A Lumi já entrou em contato com dezenas de marcas diretamente para buscar respostas claras sobre segurança para celíacos.
+    </p>
+  </div>
 
-      <h2>Por trás da Lumi ✨</h2>
+  <div class="marcas-track-wrapper">
+    <div class="marcas-track" id="marcasTrack">
+      <!-- As pills são geradas pelo JS abaixo -->
+    </div>
+  </div>
 
-      <p>
-        A Lumi combina tecnologia com curadoria humana para trazer informações mais claras e cuidadosas sobre segurança alimentar.
+  <div class="container">
+    <p class="marcas-nota">
+      Passe o mouse sobre a esteira para pausar · A lista é atualizada constantemente
+    </p>
+  </div>
+</section>
+
+
+<!-- ===== COMUNIDADE ===== -->
+<section class="community-section">
+  <div class="container">
+
+    <div class="community-header">
+      <div class="global-badge">🌍 Lista crescendo todos os dias</div>
+
+      <h2>Lugares que eu indico!</h2>
+
+      <p class="section-subtitle">
+        A Lumi já reúne indicações de estabelecimentos seguros em diferentes regiões do mundo!
       </p>
+    </div>
 
-      <p>
-        Muitas das informações passam por verificações cuidadosas, consultas a marcas e organização atenta de dados. Isso acontece porque segurança alimentar exige atenção real — especialmente para quem vive a rotina celíaca todos os dias.
-      </p>
+    <div class="community-grid">
 
-      <p>
-        A tecnologia ajuda a acelerar o processo, mas a curadoria humana continua sendo parte essencial da Lumi.
-        <br>
-        <strong style="color: var(--rosa-escuro);">Porque segurança alimentar exige mais do que respostas rápidas. Exige cuidado.</strong>
-      </p>
+      <!-- BRASIL -->
+      <div class="community-column">
+        <h3 class="community-title">Brasil</h3>
 
-      <div class="bastidores-pillars">
+        <div class="state-card">
+          <div class="state-top">
+            <strong>Paraná</strong>
+            <span>14 cidades</span>
+          </div>
 
-        <div class="bastidores-pillar">
-          <span class="pillar-icon">🔍</span>
-          Verificação cuidadosa das informações
+          <div class="city-tags">
+                <span>Curitiba</span>
+    		<span>Londrina</span>
+    		<span>Maringá</span>
+    		<span>Cascavel</span>
+    		<span>Ponta Grossa</span>
+    		<span>Guarapuava</span>
+    		<span>Toledo</span>
+    		<span>Umuarama</span>
+    		<span>Campo Mourão</span>
+    		<span>São José dos Pinhais</span>
+    		<span>Pinhais</span>
+    		<span>Foz do Iguaçu</span>
+    		<span>Cambé</span>
+          </div>
         </div>
 
-        <div class="bastidores-pillar">
-          <span class="pillar-icon">📩</span>
-          Consultas diretas às marcas
+        <div class="state-card">
+          <div class="state-top">
+            <strong>São Paulo</strong>
+            <span>6 cidades</span>
+          </div>
+
+          <div class="city-tags">
+                <span>São Paulo</span>
+    		<span>Guarulhos</span>
+    		<span>Osasco</span>
+    		<span>Santo André</span>
+    		<span>São Bernardo do Campo</span>
+    		<span>Jundiaí</span>
+          </div>
         </div>
 
-        <div class="bastidores-pillar">
-          <span class="pillar-icon">🧑‍💻</span>
-          Curadoria humana especializada
-        </div>
+        <div class="state-card">
+          <div class="state-top">
+            <strong>Rio Grande do Sul</strong>
+            <span>4 cidades</span>
+          </div>
 
-        <div class="bastidores-pillar">
-          <span class="pillar-icon">💛</span>
-          Atenção real a cada resposta
+          <div class="city-tags">
+            <span>Porto Alegre</span>
+            <span>Gramado</span>
+            <span>Caxias</span>
+            <span>Novo Hamburgo</span>
+          </div>
         </div>
+	 
+	<div class="state-card">
+  <div class="state-top">
+    <strong>Outros estados</strong>
+    <span>4 cidades</span>
+  </div>
+
+  <div class="city-tags">
+    <span>Rio de Janeiro</span>
+    <span>Belo Horizonte</span>
+    <span>Brasília</span>
+    <span>Cuiabá</span>
+  </div>
+</div>
 
       </div>
 
+      <!-- MUNDO -->
+      <div class="community-column">
+        <h3 class="community-title">Outros países</h3>
+
+        <div class="world-card">
+          <span>🇵🇹 Porto</span>
+          <span>🇵🇹 Lisboa</span>
+          <span>🇦🇷 Buenos Aires</span>
+          <span>🇺🇸 Orlando</span>
+          <span>🇪🇸 Barcelona</span>
+        </div>
+
+        <div class="world-note">
+          Novos lugares são adicionados constantemente ✨
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BASTIDORES -->
+<section class="bastidores">
+  <div class="container">
+    <div class="bastidores-inner">
+      <h2>Por trás da Lumi ✨</h2>
+      <p>A Lumi combina tecnologia com curadoria humana para trazer informações mais claras e cuidadosas sobre segurança alimentar.</p>
+      <p>Muitas das informações passam por verificações cuidadosas, consultas a marcas e organização atenta de dados. Isso acontece porque segurança alimentar exige atenção real — especialmente para quem vive a rotina celíaca todos os dias.</p>
+      <p>A tecnologia ajuda a acelerar o processo, mas a curadoria humana continua sendo parte essencial da Lumi.<br>
+        <strong style="color: var(--rosa-escuro);">Porque segurança alimentar exige mais do que respostas rápidas. Exige cuidado.</strong>
+      </p>
+      <div class="bastidores-pillars">
+        <div class="bastidores-pillar"><span class="pillar-icon">🔍</span>Verificação cuidadosa das informações</div>
+        <div class="bastidores-pillar"><span class="pillar-icon">📩</span>Consultas diretas às marcas</div>
+        <div class="bastidores-pillar"><span class="pillar-icon">🧑‍💻</span>Curadoria humana especializada</div>
+        <div class="bastidores-pillar"><span class="pillar-icon">💛</span>Atenção real a cada resposta</div>
+      </div>
     </div>
   </div>
 </section>
@@ -856,102 +921,41 @@ h2 {
 <!-- TRUST -->
 <section class="trust">
   <div class="container">
-
-    <h2>
-      O que a Lumi considera nas respostas?
-    </h2>
-
+    <h2>O que a Lumi considera nas respostas?</h2>
     <div class="trust-grid">
-
-      <div class="trust-card">
-        ✔ Ingredientes informados pelas marcas
-      </div>
-
-      <div class="trust-card">
-        ✔ Possível risco de contaminação cruzada
-      </div>
-
-      <div class="trust-card">
-        ✔ Respostas oficiais de SAC
-      </div>
-
-      <div class="trust-card">
-        ✔ Recomendações da comunidade celíaca
-      </div>
-
-      <div class="trust-card">
-        ✔ Atualizações constantes
-      </div>
-
+      <div class="trust-card">✔ Ingredientes informados pelas marcas</div>
+      <div class="trust-card">✔ Possível risco de contaminação cruzada</div>
+      <div class="trust-card">✔ Respostas oficiais de SAC</div>
+      <div class="trust-card">✔ Recomendações da comunidade celíaca</div>
+      <div class="trust-card">✔ Atualizações constantes</div>
     </div>
-
     <div class="warning-box">
-      <strong>Importante:</strong>
-      A Lumi ajuda na tomada de decisão e busca trazer informações mais claras para o dia a dia. Ainda assim, cada pessoa deve fazer sua avaliação criteriosa com base nas informações apresentadas.
+      <strong>Importante:</strong> A Lumi ajuda na tomada de decisão e busca trazer informações mais claras para o dia a dia. Ainda assim, cada pessoa deve fazer sua avaliação criteriosa com base nas informações apresentadas.
     </div>
-
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
 <section>
   <div class="container">
-
-    <h2>
-      A Lumi já começou a ajudar pessoas celíacas
-    </h2>
-
+    <h2>A Lumi já começou a ajudar pessoas celíacas</h2>
     <div class="testimonials-grid">
-
-      <div class="testimonial">
-        "Pela primeira vez senti que não precisava pesquisar tudo sozinha."
-        <br><br>
-        <strong>— Cíntia</strong>
-      </div>
-
-      <div class="testimonial">
-        "Descobri um lugar sem glúten na minha cidade que eu nem sabia que existia."
-        <br><br>
-        <strong>— Mariana</strong>
-      </div>
-
-      <div class="testimonial">
-        "A Lumi é a ajuda que eu gostaria de ter tido no começo do diagnóstico."
-        <br><br>
-        <strong>— Renata</strong>
-      </div>
-
+      <div class="testimonial">"Pela primeira vez senti que não precisava pesquisar tudo sozinha."<br><br><strong>— Cíntia</strong></div>
+      <div class="testimonial">"Descobri um lugar sem glúten na minha cidade que eu nem sabia que existia."<br><br><strong>— Mariana</strong></div>
+      <div class="testimonial">"A Lumi é a ajuda que eu gostaria de ter tido no começo do diagnóstico."<br><br><strong>— Renata</strong></div>
     </div>
-
   </div>
 </section>
 
 <!-- PRICING -->
 <section>
   <div class="container">
-
-    <h2>
-      Uma assinatura simples e transparente
-    </h2>
-
+    <h2>Uma assinatura simples e transparente</h2>
     <div class="pricing-box">
-
-      <div class="curadoria-seal">
-        ✨ Curadoria humana especializada
-      </div>
-
-      <h3>
-        Acesso completo
-      </h3>
-
-      <div class="price">
-        R$9,90
-      </div>
-
-      <p>
-        por mês
-      </p>
-
+      <div class="curadoria-seal">✨ Curadoria humana especializada</div>
+      <h3>Acesso completo</h3>
+      <div class="price">R$9,90</div>
+      <p>por mês</p>
       <ul>
         <li>✔ Consultas sobre marcas</li>
         <li>✔ Análise de ingredientes por foto</li>
@@ -959,175 +963,201 @@ h2 {
         <li>✔ Atualizações constantes</li>
         <li>✔ Tudo direto no WhatsApp</li>
       </ul>
-
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdcyAqHp8-tWpIPzVzhvIlPYc_TP84dxjy6oMUnArhsPDff4w/viewform?usp=publish-editor" class="btn">
-        Começar agora
-      </a>
-
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdcyAqHp8-tWpIPzVzhvIlPYc_TP84dxjy6oMUnArhsPDff4w/viewform?usp=publish-editor" class="btn">Começar agora</a>
       <div class="pix-steps">
-
-                <div class="pix-steps-title">
-          💸 Como funciona a assinatura?
-        </div>
-
-        <div class="pix-step">
-          <div class="pix-step-num">1</div>
-          <span>Preencha o formulário de cadastro — leva menos de 1 minuto</span>
-        </div>
-
-        <div class="pix-step">
-          <div class="pix-step-num">2</div>
-          <span>Entro em contato pelo seu WhatsApp com a chave Pix e as instruções</span>
-        </div>
-
-        <div class="pix-step">
-          <div class="pix-step-num">3</div>
-          <span>Configure o Pix com repetição mensal no seu banco — é simples e te explico o passo a passo se precisar </span>
-        </div>
-
-        <div class="pix-step">
-          <div class="pix-step-num">4</div>
-          <span>Pronto! Você já é assinante da Lumi</span>
-        </div>
-
+        <div class="pix-steps-title">💸 Como funciona a assinatura?</div>
+        <div class="pix-step"><div class="pix-step-num">1</div><span>Preencha o formulário de cadastro — leva menos de 1 minuto</span></div>
+        <div class="pix-step"><div class="pix-step-num">2</div><span>Entro em contato pelo seu WhatsApp com a chave Pix e as instruções</span></div>
+        <div class="pix-step"><div class="pix-step-num">3</div><span>Configure o Pix com repetição mensal no seu banco — é simples e te explico o passo a passo se precisar</span></div>
+        <div class="pix-step"><div class="pix-step-num">4</div><span>Pronto! Você já é assinante da Lumi</span></div>
         <p class="pix-nota">Sem cartão de crédito. Sem plataforma. Sem letras pequenas. Você pode cancelar quando quiser — é só parar o Pix agendado no seu banco.</p>
-
       </div>
-
     </div>
-
   </div>
 </section>
 
 <!-- ABOUT -->
 <section class="about">
   <div class="container about-content">
-
     <div class="about-image">
       <img src="ju_profile.jpg" alt="Ju">
     </div>
-
     <div class="about-text">
-
-      <h2>
-        Prazer, eu sou a Ju ✨
-      </h2>
-
-      <p>
-        Depois de 14 anos convivendo com a doença celíaca, eu conheço bem a exaustão de precisar pesquisar tudo antes de consumir.
-      </p>
-
-      <p>
-        Ao longo desses anos, percebi que a parte mais difícil nem sempre é viver sem glúten — mas sim conviver diariamente com a insegurança.
-      </p>
-
-      <p>
-        A Lumi nasceu justamente da ferramenta que eu gostaria de ter tido durante toda essa jornada.
-      </p>
-
-      <p>
-        A ideia era simples: transformar dúvida em clareza usando tecnologia de uma forma acolhedora, prática e realmente útil para quem vive a rotina celíaca.
-      </p>
-
-      <p>
-        Hoje, a Lumi ajuda pessoas a entender ingredientes, descobrir lugares mais seguros e encontrar informações com mais tranquilidade — tudo diretamente no WhatsApp.
-      </p>
-
-      <p>
-        A Lumi já me ajuda demais no dia a dia e tenho certeza que ela será sua melhor companhia sem glúten daqui pra frente.
-      </p>
-
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdcyAqHp8-tWpIPzVzhvIlPYc_TP84dxjy6oMUnArhsPDff4w/viewform?usp=publish-editor" class="btn">
-        Conversar com a Lumi
-      </a>
-
+      <h2>Prazer, eu sou a Ju ✨</h2>
+      <p>Depois de 14 anos convivendo com a doença celíaca, eu conheço bem a exaustão de precisar pesquisar tudo antes de consumir.</p>
+      <p>Ao longo desses anos, percebi que a parte mais difícil nem sempre é viver sem glúten — mas sim conviver diariamente com a insegurança.</p>
+      <p>A Lumi nasceu justamente da ferramenta que eu gostaria de ter tido durante toda essa jornada.</p>
+      <p>A ideia era simples: transformar dúvida em clareza usando tecnologia de uma forma acolhedora, prática e realmente útil para quem vive a rotina celíaca.</p>
+      <p>Hoje, a Lumi ajuda pessoas a entender ingredientes, descobrir lugares mais seguros e encontrar informações com mais tranquilidade — tudo diretamente no WhatsApp.</p>
+      <p>A Lumi já me ajuda demais no dia a dia e tenho certeza que ela será sua melhor companhia sem glúten daqui pra frente.</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdcyAqHp8-tWpIPzVzhvIlPYc_TP84dxjy6oMUnArhsPDff4w/viewform?usp=publish-editor" class="btn">Conversar com a Lumi</a>
     </div>
-
   </div>
 </section>
 
 <!-- FAQ -->
 <section class="faq">
   <div class="container">
-
-    <h2>
-      Perguntas frequentes
-    </h2>
-
+    <h2>Perguntas frequentes</h2>
     <div class="faq-container">
-
       <div class="faq-item">
         <h3>Como funciona a assinatura?</h3>
-        <p>
-          É simples! Você preenche o formulário de cadastro, entro em contato pelo seu WhatsApp com a chave Pix e as instruções, e você configura o Pix com repetição mensal no seu banco. Sem cartão de crédito, sem plataforma, sem burocracia. Se tiver dúvida na configuração, é só me perguntar — eu te explico o passo a passo.
-        </p>
+        <p>É simples! Você preenche o formulário de cadastro, entro em contato pelo seu WhatsApp com a chave Pix e as instruções, e você configura o Pix com repetição mensal no seu banco. Sem cartão de crédito, sem plataforma, sem burocracia. Se tiver dúvida na configuração, é só me perguntar — eu te explico o passo a passo.</p>
       </div>
-
       <div class="faq-item">
         <h3>Como faço para cancelar?</h3>
-        <p>
-          É só parar o Pix agendado no seu banco. Além disso, basta enviar um e-mail para assistente.lumi.suporte@gmail.com informando sobre o cancelamento e você será removido da base de contatos da Lumi.
-        </p>
+        <p>É só parar o Pix agendado no seu banco. Além disso, basta enviar um e-mail para assistente.lumi.suporte@gmail.com informando sobre o cancelamento e você será removido da base de contatos da Lumi.</p>
       </div>
-
       <div class="faq-item">
         <h3>As respostas são totalmente automáticas?</h3>
-        <p>
-          Não. A Lumi combina tecnologia com curadoria humana para trazer respostas mais cuidadosas e confiáveis sobre segurança alimentar. Cada informação passa por um processo atento de verificação.
-        </p>
+        <p>Não. A Lumi combina tecnologia com curadoria humana para trazer respostas mais cuidadosas e confiáveis sobre segurança alimentar. Cada informação passa por um processo atento de verificação.</p>
       </div>
-
       <div class="faq-item">
         <h3>A Lumi substitui orientação médica?</h3>
-        <p>
-          Não. A Lumi ajuda na busca por informações e segurança alimentar no dia a dia, mas não substitui o acompanhamento de um profissional de saúde.
-        </p>
+        <p>Não. A Lumi ajuda na busca por informações e segurança alimentar no dia a dia, mas não substitui o acompanhamento de um profissional de saúde.</p>
       </div>
-
       <div class="faq-item">
         <h3>A Lumi garante que um produto é 100% seguro?</h3>
-        <p>
-          O que a Lumi faz é entrar em contato com o SAC das marcas e trazer a resposta de forma clara para você. A decisão final é sempre sua.
-        </p>
+        <p>O que a Lumi faz é entrar em contato com o SAC das marcas e trazer a resposta de forma clara para você. A decisão final é sempre sua.</p>
       </div>
-
       <div class="faq-item">
         <h3>Posso enviar fotos?</h3>
-        <p>
-          Sim! Você pode enviar fotos de ingredientes e composições para análise.
-        </p>
+        <p>Sim! Você pode enviar fotos de ingredientes e composições para análise.</p>
       </div>
-
     </div>
-
   </div>
 </section>
 
 <!-- CTA FINAL -->
 <section class="final-cta">
   <div class="container">
-
-    <h2>
-      Menos medo. Mais autonomia.
-    </h2>
-
-    <p>
-      Você já precisa se preocupar com coisa demais.
-      <p>
-      A Lumi ajuda no resto ✨
-      </p>
-    </p>
-
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdcyAqHp8-tWpIPzVzhvIlPYc_TP84dxjy6oMUnArhsPDff4w/viewform?usp=publish-editor" class="btn">
-      Testar a Lumi agora
-    </a>
-
+    <h2>Menos medo. Mais autonomia.</h2>
+    <p>Você já precisa se preocupar com coisa demais.<br>A Lumi ajuda no resto ✨</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdcyAqHp8-tWpIPzVzhvIlPYc_TP84dxjy6oMUnArhsPDff4w/viewform?usp=publish-editor" class="btn">Testar a Lumi agora</a>
   </div>
 </section>
 
-<footer>
-  © 2026 Lumi ✨ | Uma companhia para a rotina sem glúten
-</footer>
+<footer>© 2026 Lumi ✨ | Uma companhia para a rotina sem glúten</footer>
+
+<script>
+const MARCAS = [
+  "3 Corações",
+  "55",
+  "Adaptogen",
+  "Amafil",
+  "Aminna",
+  "Amstel",
+  "Apti",
+  "Aurea",
+  "Aurora",
+  "Beiju Bom",
+  "Bem Nutrir",
+  "Bizzineli",
+  "Bonduelle",
+  "Brasil Frutt",
+  "Campo Largo",
+  "Carolitas",
+  "Casa Fortunato",
+  "Casa Rigani",
+  "Casarão",
+  "Cereal Crock",
+  "Chocolife",
+  "Chocosoy",
+  "Crek Crek",
+  "Da Colônia",
+  "Da Terrinha",
+  "Deusa",
+  "Di Mangiare",
+  "Divine",
+  "Dr. Oetker",
+  "Ecobio",
+  "Elefante",
+  "Equaliv",
+  "Fit Food",
+  "Frimesa",
+  "Garoto",
+  "Geloni Sorvetes",
+  "Goodsoy",
+  "Grani Amici",
+  "Grano",
+  "Growth",
+  "Gullón",
+  "Halls",
+  "Heinz",
+  "Hellmann's",
+  "Jazam",
+  "Kalassi",
+  "Kinder",
+  "King Mix",
+  "Kitano",
+  "Kojac",
+  "La Violetera",
+  "Leve Croc",
+  "Liza",
+  "Maizena",
+  "Manezinho",
+  "Maniva",
+  "Marilis",
+  "Mavalério",
+  "Mendoá Chocolates",
+  "Miss Laura",
+  "Moinhos Jaraguá",
+  "Monama",
+  "Mosmann",
+  "Não de Queijo",
+  "Naturatta",
+  "Nazinha",
+  "Nestlé",
+  "Nugali",
+  "Nutfree",
+  "Nutripleno",
+  "Nuttini",
+  "Okoshi",
+  "Pamplona",
+  "Pé Vermelho",
+  "Predilecta",
+  "Risovita",
+  "Rosa",
+  "Schär",
+  "Seu Divino",
+  "Shambala",
+  "Slim",
+  "Snuks",
+  "Sol",
+  "Soya",
+  "Stein Hauss",
+  "Tainá Alimentos",
+  "Tio João",
+  "Toblerone",
+  "Tribeca",
+  "True",
+  "União",
+  "Urbano",
+  "Valed'Ouro",
+  "Vapza",
+  "Vitabrás",
+  "Vitafor",
+  "Vitao",
+  "Wickbold",
+  "Yoki",
+  "Zaya"
+];
+
+/* =====================
+   ESTEIRA DE MARCAS
+   ===================== */
+function buildCarousel() {
+  const track = document.getElementById('marcasTrack');
+  // duplica para loop infinito
+  const allBrands = [...MARCAS, ...MARCAS];
+  track.innerHTML = allBrands.map(m =>
+    `<span class="marca-pill"><span class="marca-dot"></span>${m}</span>`
+  ).join('');
+}
+
+
+buildCarousel();
+</script>
 
 </body>
 </html>
