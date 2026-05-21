@@ -480,30 +480,89 @@ footer { padding: 30px; text-align: center; font-size: 14px; background: #f7f7f7
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: #fafafa;
-  border: 1px solid #f0e8f5;
   border-radius: 999px;
   padding: 12px 22px;
   font-size: 15px;
   font-weight: 500;
-  color: var(--texto);
   white-space: nowrap;
-  transition: background 0.2s, border-color 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
   cursor: default;
 }
 
-.marca-pill:hover {
-  background: #fff0f7;
-  border-color: var(--rosa-escuro);
-  color: #cc6699;
+/* Marca com resposta */
+.marca-pill.respondida {
+  background: #f0fdf7;
+  border: 1.5px solid #8dd8b3;
+  color: #2a7a55;
 }
-
-.marca-pill .marca-dot {
+.marca-pill.respondida:hover {
+  background: #e0faf0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(141,216,179,0.3);
+}
+.marca-pill.respondida .marca-dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--rosa-escuro);
+  background: #4cb882;
   flex-shrink: 0;
+}
+
+/* Marca aguardando resposta */
+.marca-pill.aguardando {
+  background: #fafafa;
+  border: 1.5px dashed #d4c4dc;
+  color: #999;
+}
+.marca-pill.aguardando:hover {
+  background: #f5f0f9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(180,150,200,0.15);
+}
+.marca-pill.aguardando .marca-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ccc;
+  flex-shrink: 0;
+}
+
+/* Legenda */
+.marcas-legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  margin: 0 auto 40px;
+  flex-wrap: wrap;
+}
+.marcas-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+.legend-dot-green {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: #4cb882;
+  flex-shrink: 0;
+}
+.legend-dot-gray {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  flex-shrink: 0;
+}
+.legend-line {
+  width: 1px; height: 20px;
+  background: #e0e0e0;
+}
+.marcas-count {
+  font-size: 13px;
+  color: #aaa;
 }
 
 .marcas-nota {
@@ -772,11 +831,32 @@ footer { padding: 30px; text-align: center; font-size: 14px; background: #f7f7f7
     <p class="section-subtitle">
       A Lumi já entrou em contato com dezenas de marcas diretamente para buscar respostas claras sobre segurança para celíacos — e disponibiliza tudo gratuitamente.
     </p>
+
+    <!-- Legenda -->
+    <div class="marcas-legend">
+      <div class="marcas-legend-item">
+        <div class="legend-dot-green"></div>
+        Resposta recebida
+        <span class="marcas-count" id="countRespondidas"></span>
+      </div>
+      <div class="legend-line"></div>
+      <div class="marcas-legend-item">
+        <div class="legend-dot-gray"></div>
+        Aguardando resposta
+        <span class="marcas-count" id="countAguardando"></span>
+      </div>
+    </div>
   </div>
 
+  <!-- Esteira 1: respondidas -->
+  <div class="marcas-track-wrapper" style="margin-bottom:14px;">
+    <div class="marcas-track" id="marcasTrackRespondidas">
+    </div>
+  </div>
+
+  <!-- Esteira 2: aguardando, direção inversa -->
   <div class="marcas-track-wrapper">
-    <div class="marcas-track" id="marcasTrack">
-      <!-- As pills são geradas pelo JS abaixo -->
+    <div class="marcas-track" id="marcasTrackAguardando" style="animation-direction:reverse;">
     </div>
   </div>
 
@@ -1082,123 +1162,54 @@ footer { padding: 30px; text-align: center; font-size: 14px; background: #f7f7f7
 <footer>© 2026 Lumi ✨ | Uma companhia para a rotina sem glúten</footer>
 
 <script>
-const MARCAS = [
-  "3 Corações",
-  "55",
-  "Adaptogen",
-  "Amafil",
-  "Aminna",
-  "Amstel",
-  "Apti",
-  "Aurea",
-  "Aurora",
-  "Beiju Bom",
-  "Bem Nutrir",
-  "Bizzineli",
-  "Bonduelle",
-  "Brasil Frutt",
-  "Campo Largo",
-  "Carolitas",
-  "Casa Fortunato",
-  "Casa Rigani",
-  "Casarão",
-  "Cereal Crock",
-  "Chocolife",
-  "Chocosoy",
-  "Crek Crek",
-  "Da Colônia",
-  "Da Terrinha",
-  "Deusa",
-  "Di Mangiare",
-  "Divine",
-  "Dr. Oetker",
-  "Ecobio",
-  "Elefante",
-  "Equaliv",
-  "Fit Food",
-  "Frimesa",
-  "Garoto",
-  "Geloni Sorvetes",
-  "Goodsoy",
-  "Grani Amici",
-  "Grano",
-  "Growth",
-  "Gullón",
-  "Halls",
-  "Heinz",
-  "Hellmann's",
-  "Jazam",
-  "Kalassi",
-  "Kinder",
-  "King Mix",
-  "Kitano",
-  "Kojac",
-  "La Violetera",
-  "Leve Croc",
-  "Liza",
-  "Maizena",
-  "Manezinho",
-  "Maniva",
-  "Marilis",
-  "Mavalério",
-  "Mendoá Chocolates",
-  "Miss Laura",
-  "Moinhos Jaraguá",
-  "Monama",
-  "Mosmann",
-  "Não de Queijo",
-  "Naturatta",
-  "Nazinha",
-  "Nestlé",
-  "Nugali",
-  "Nutfree",
-  "Nutripleno",
-  "Nuttini",
-  "Okoshi",
-  "Pamplona",
-  "Pé Vermelho",
-  "Predilecta",
-  "Risovita",
-  "Rosa",
-  "Schär",
-  "Seu Divino",
-  "Shambala",
-  "Slim",
-  "Snuks",
-  "Sol",
-  "Soya",
-  "Stein Hauss",
-  "Tainá Alimentos",
-  "Tio João",
-  "Toblerone",
-  "Tribeca",
-  "True",
-  "União",
-  "Urbano",
-  "Valed'Ouro",
-  "Vapza",
-  "Vitabrás",
-  "Vitafor",
-  "Vitao",
-  "Wickbold",
-  "Yoki",
-  "Zaya"
+const MARCAS_RESPONDIDAS = [
+  "Aminna", "Amstel", "Bem Nutrir", "Belive", "Campo Largo",
+  "Carolitas", "Casarão", "Crek Crek", "Da Colônia", "Di Mangiare",
+  "Divine", "Dr. Oetker", "Equaliv", "Família Tauscher", "Fred",
+  "Goodsoy", "Grani Amici", "Grano Auri", "Hellmann's", "Kitano",
+  "Kojac", "La Violetera", "Maizena", "Maniva", "Monama",
+  "Naturatta", "Nugali", "Nutrify", "Nuttini", "Pamplona",
+  "Schär", "Sol", "Tainá Alimentos", "Vapza", "Vitao", "Yoki"
 ];
 
-/* =====================
-   ESTEIRA DE MARCAS
-   ===================== */
-function buildCarousel() {
-  const track = document.getElementById('marcasTrack');
-  // duplica para loop infinito
-  const allBrands = [...MARCAS, ...MARCAS];
-  track.innerHTML = allBrands.map(m =>
-    `<span class="marca-pill"><span class="marca-dot"></span>${m}</span>`
+const MARCAS_AGUARDANDO = [
+  "3 Corações", "55", "Adaptogen", "Aleca", "Amafil",
+  "Apti", "Aruba", "Aurea", "Aurora", "Barilla",
+  "Beiju Bom", "Bizzineli", "Bonduelle", "Brasil Frutt", "Carobhouse",
+  "Casa Fortunato", "Casa Rigani", "Cereal Crock", "Chocolife", "Chocosoy",
+  "Da Terrinha", "Deusa", "Dona Nena", "Ecobio", "Elefante",
+  "Fit Food", "Forno de Minas", "Frimesa", "Garoto", "Geloni Sorvetes",
+  "Grano", "Growth", "Gullón", "Häagen-Dazs", "Halls",
+  "Heinz", "Jasmine", "Jazam", "Kalassi", "Kinder",
+  "King Mix", "Leve Croc", "Life Natural", "Liza", "Manezinho",
+  "Marilis", "Mavalério", "Melitta", "Mendoá Chocolates", "Mentos",
+  "Miss Laura", "Moinhos Jaraguá", "Mosmann", "Não de Queijo", "Nazinha",
+  "Nestlé", "Nutfree", "Nutripleno", "Nutrivita", "Okoshi",
+  "Pé Vermelho", "Pilão", "Predilecta", "Risovita", "Rosa",
+  "Seu Divino", "Shambala", "Sicao", "Sinhá", "Slim",
+  "Soya", "Stein Hauss", "Tio João", "Toblerone", "Tribeca",
+  "True", "União", "Urbano", "Valed'Ouro", "Vitabrás",
+  "Vitafor", "Vitalin", "Wickbold", "Zaya"
+];
+
+function buildTrack(trackId, marcas, tipo) {
+  const track = document.getElementById(trackId);
+  const all = [...marcas, ...marcas]; // duplica para loop infinito
+  track.innerHTML = all.map(m =>
+    `<span class="marca-pill ${tipo}"><span class="marca-dot"></span>${m}</span>`
   ).join('');
+
+  // Pausa ao hover
+  track.addEventListener('mouseenter', () => track.style.animationPlayState = 'paused');
+  track.addEventListener('mouseleave', () => track.style.animationPlayState = 'running');
 }
 
+// Atualiza contadores na legenda
+document.getElementById('countRespondidas').textContent = `(${MARCAS_RESPONDIDAS.length})`;
+document.getElementById('countAguardando').textContent = `(${MARCAS_AGUARDANDO.length})`;
 
-buildCarousel();
+buildTrack('marcasTrackRespondidas', MARCAS_RESPONDIDAS, 'respondida');
+buildTrack('marcasTrackAguardando', MARCAS_AGUARDANDO, 'aguardando');
 </script>
 
 </body>
